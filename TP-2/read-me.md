@@ -163,8 +163,25 @@ on essaye de manipuler la table arp on utilise donc on va chercher la mac de ma 
 ```
 (192.168.80.2) at 6a:63:bb:61:90:d2 on bridge100 ifscope [bridge]
 ```
- mon adresse mac coorespond 
+ donc mon adresse mac est 
+ 
+ ```
+ 6a:63:bb:61:90:d2
+```
 
+ensuite pour determiner ll'adresse mac de la gateway de reseau on prend l'adresse ip de notre réseau donc celui d'ynov et ensuite on prends l'adresse mac 
+
+```
+(10.33.16.68) at c8:89:f3:ac:3b:d4 on en0 ifscope permanent [ethernet]
+```
+donc l'adresse mac de la gateway est 
+
+```
+c8:89:f3:ac:3b:d4
+```
+maintenant on manipule notre table arp: 
+
+on peut la suprimer avec la commande 
 
 ```
 sudo arp -a -d
@@ -223,5 +240,35 @@ maximeboizot@MacBook-pro-de-Maxime ~ % arp -a
 ? (10.33.19.254) at 0:c0:e7:e0:4:4e on en0 ifscope [ethernet]
 ? (192.168.80.1) at ca:89:f3:ca:67:64 on bridge100 ifscope permanent [bridge]
 ```
+donc quand on tape 
 
-pour trouver la mac du réseau ynov on cherche l'adresse ip du reseau ynov l'adresse etant 
+```
+arp -a
+```
+on obtient 
+
+```
+maximeboizot@MacBook-pro-de-Maxime ~ % arp -a
+? (10.33.16.68) at c8:89:f3:ac:3b:d4 on en0 ifscope permanent [ethernet]
+? (10.33.18.34) at f2:1f:de:42:65:57 on en0 ifscope [ethernet]
+? (10.33.19.254) at 0:c0:e7:e0:4:4e on en0 ifscope [ethernet]
+? (192.168.80.1) at ca:89:f3:ca:67:64 on bridge100 ifscope permanent [bridge]
+
+```
+le ligne qui apparaisse son reaparu casiment instantanement car l'rdinateur a continuer de communiquer avec les machine a qui appartaienne c'est ip, mais on belle et bien été suprimmer a la base
+
+si on egarde via wireshark le première échange après la supression de la table arp on obtient ceci:
+
+[capture wireshark](capture%20premi%C3%A8re%20echange%20arp.pcapng)
+
+on remarque au debut sur le premier échange arp dans la colonne info qu'il y a cet phrase "Who has 192.168.80.2? Tell 192.168.80.1" et si on regarde l'expediteur ils s'agit de mon adresse mac donc mon ordinateur demande qu'elle est la machine qui a l'ip 192.168.80.2 . eten reponces elle obtient la mac de la VM.
+
+et pareil un peut plus loin la vm demande qu'elle machine possede l'ip 192.168.80.1 et obtien en réponces la mac de mon ordinateur physique.
+
+## III. DHCP you too my brooo
+
+pour forcer l'échange DHCP je déconnecte mon ordinateur du réseau wifi, on lance wireshark et la capture et on reconnecter le wifi et la wireshark a capture les premier paquets DHCP donc DORA.
+
+[capture de l'échange DHCP](capture%20dhcp.pcapng)
+
+en bref le premier paquet est envoyer par l'ordi a la box demande une IP, le deuxieme demande l'adresse de la gateway donc de la box, et le dernier paquets est plus ou moins un accuser réception et une mise en place de ces info car on remarque que desormais quand les deux communique c'est desormais des adresse ip qui s'affiche pour a source et la destination. 
