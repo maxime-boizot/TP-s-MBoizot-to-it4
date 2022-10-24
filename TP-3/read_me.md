@@ -1,6 +1,6 @@
 # TP3 : On va router des trucs
 
-## I. ARP
+## 1. Echange ARP
 
 pour effectuer les ping on utilise la commande ip a pour trouver les deux ip 
 
@@ -34,4 +34,24 @@ et si on tape la même commande sur la machine de max on obtient l'ip de la mach
 ```
 ? (192.168.80.3) at ca:89:f3:ca:67:64 [ether] on enp0s6
 ```
+
+## 2. Analyse de trames
+
+
+
+poour capture l'interfa e ouce trouve notre vm on tape la commande 
+
+```
+tcpdump -i <interface> -W <fichier>
+```
+
+ce qui donne pour moi 
+
+```
+tcpdump -i bridge100 -w tp3_arp.pcapng arp 
+```
+
+on rajoute arp pour filtrer les paquet et ne garder que les paquets souhaiter dans notre cas c'est l'arp 
+
+[et la petit capture arp qui fait plaisir](tp3_arp.pcappng)
 
