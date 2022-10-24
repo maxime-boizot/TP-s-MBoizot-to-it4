@@ -1,6 +1,8 @@
 # TP3 : On va router des trucs
 
-## 1. Echange ARP
+## I. ARP
+
+### 1. Echange ARP
 
 pour effectuer les ping on utilise la commande ip a pour trouver les deux ip 
 
@@ -35,7 +37,7 @@ et si on tape la même commande sur la machine de max on obtient l'ip de la mach
 ? (192.168.80.3) at ca:89:f3:ca:67:64 [ether] on enp0s6
 ```
 
-## 2. Analyse de trames
+### 2. Analyse de trames
 
 
 
@@ -55,3 +57,21 @@ on rajoute arp pour filtrer les paquet et ne garder que les paquets souhaiter da
 
 [et la petit capture arp qui fait plaisir](tp3_arp.pcappng)
 
+## II. Routage
+
+### 1. Mise en place du routage
+
+on mets en place notre router donc on ce sert d'une VM pour le faire et on tape ces 4 commande pour le configurer 
+
+```
+$ sudo firewall-cmd --list-all
+$ sudo firewall-cmd --get-active-zone
+$ sudo firewall-cmd --add-masquerade --zone=public
+$ sudo firewall-cmd --add-masquerade --zone=public --permanent
+```
+
+une fois cela fait 
+
+(on passe la partie qui parametre les route statique pour ping marcel sur jhon un inversement du au fait que je suis sous mac)
+
+### 2. Analyse de trames
