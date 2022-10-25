@@ -72,6 +72,7 @@ $ sudo firewall-cmd --add-masquerade --zone=public --permanent
 
 une fois cela fait 
 
-(on passe la partie qui parametre les route statique pour ping marcel sur jhon un inversement du au fait que je suis sous mac)
+(on passe a la partie 3 du au fait que je suis sous mac)
 
-### 2. Analyse de trames
+### 3. Accès internet
+
