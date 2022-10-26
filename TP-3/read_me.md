@@ -76,3 +76,6 @@ une fois cela fait
 
 ### 3. Accès internet
 
+après avoir ajouté une carte réseau à notre routeur 
+
+nous allons effectuer unue analyse des trames 
