@@ -31,7 +31,7 @@ donc go casser de la VM
 
 sa y est c'est pété 
 
-[petit-grub-psk-cpt](picture/capture-cpt-1.png)
+![petit-grub-psk-cpt](picture/capture-cpt-1.png)
 
 comment avons nous fait ? 
 
