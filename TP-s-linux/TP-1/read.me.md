@@ -2,11 +2,11 @@
 
 ## Sommaire:
 
--[TP1 : Are you dead yet ?](#tp1--are-you-dead-yet)
+- [TP1 : Are you dead yet ?](#tp1--are-you-dead-yet)
 
--[I. Intro](#i-intro)
+- [I. Intro](#i-intro)
 
-    -[II. Feu](#ii-feu)
+    - [II. Feu](#ii-feu)
 
 ON VA PETER DES TRUC !!!
 
