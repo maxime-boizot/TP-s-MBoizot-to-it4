@@ -106,3 +106,101 @@ donc on vois mes connexion et déconnexion de test pour voir si tt est oppé ava
 
 # 2. Modification du service
 
+nous allons tout d'abors aller trouver le fichier de conf du ssh qui ce trouve dans le dossier etc puis ssh donc bete commande 
+
+```
+cd /etc/ssh
+```
+et on arrive dans le dossier petit 
+
+```
+ls -l
+```
+
+pour check ce qu'il ya la dedans 
+
+![folders](picture/folders.webp)
+
+```
+[max@localhost ssh]$ ls -l
+total 600
+-rw-r--r--. 1 root root     578094 Nov 15 11:07 moduli
+-rw-r--r--. 1 root root       1921 Nov 15 11:07 ssh_config
+drwxr-xr-x. 2 root root         28 Dec 27 23:58 ssh_config.d
+-rw-r-----. 1 root ssh_keys    492 Dec 26 22:13 ssh_host_ecdsa_key
+-rw-r--r--. 1 root root        162 Dec 26 22:13 ssh_host_ecdsa_key.pub
+-rw-r-----. 1 root ssh_keys    387 Dec 26 22:13 ssh_host_ed25519_key
+-rw-r--r--. 1 root root         82 Dec 26 22:13 ssh_host_ed25519_key.pub
+-rw-r-----. 1 root ssh_keys   2578 Dec 26 22:13 ssh_host_rsa_key
+-rw-r--r--. 1 root root        554 Dec 26 22:13 ssh_host_rsa_key.pub
+-rw-------. 1 root root       3667 Nov 15 11:07 sshd_config
+drwx------. 2 root root         59 Dec 27 23:58 sshd_config.d
+```
+
+du a son nom on devine que le fichier nommé ssh_config est le fichié rechercher 
+
+![elementary](picture/elementary.webp)
+
+et si on essayais de le bidouiller un peu ce petit fichier qui nous a strictement rien demander (sans rien casser évidement)
+
+on execute la commande 
+
+```
+echo $RABDOM
+```
+
+pour obtenir un nombre au hazard et on obtien 
+
+![roulement de tambour](picture/relementdetambou.webp)
+
+19618
+
+bon bha on va changer le port d'écoute qui de base est le 22 dans le fichier de conf par le port 19618
+
+let's go 
+
+```
+nano ssh_config
+```
+
+pour modifier le fichier on cherche la ligne port et on mets notre nombre on save et tada
+
+```
+[max@localhost ssh]$ cat ssh_config | grep Port
+#   Port 19618
+```
+
+maintenant on doit gerer le firewall fermer le port 22 et ouvrir le port 19618
+
+on reload le firewall 
+
+```
+sudo firewall-cmd --reload
+```
+
+petit list-all qui montre les modif 
+
+```
+[max@localhost ssh]$ sudo firewall-cmd --list-all | grep port
+  ports: 19618/tcp
+  forward-ports: 
+  source-ports:
+```
+
+on redemare le services 
+
+```
+systemctl restart
+```
+
+vu quenje l'ai éxécuté directement en ssh il m'as redemander monmots de passe mais ça donne ça 
+
+```
+[max@localhost ssh]$ systemctl restart sshd
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ====
+Authentication is required to restart 'sshd.service'.
+Authenticating as: boizot maxime (max)
+Password: 
+==== AUTHENTICATION COMPLETE ====
+```
+
