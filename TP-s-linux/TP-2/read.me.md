@@ -9,6 +9,8 @@
   - [2. Modification du service](#2-modification-du-service)
 - [II. Service HTTP](#ii-service-http)
   - [1. Mise en place](#1-mise-en-place)
+  - [2. Analyser la conf de NGINX](#2-analyser-la-conf-de-nginx)
+  - [3. Déployer un nouveau site web](#3-déployer-un-nouveau-site-web)
 
 ## Checklist
 
@@ -391,3 +393,104 @@ et ça affiche ça
       html {
 
 ```
+
+## 2. Analyser la conf de NGINX
+
+bon c'est bien beau mais baladon nous un peu dans la conf de ce service et customison le 
+
+bon deja il est ou ??? 
+
+![ilestou](picture/whereisit.gif)
+
+et si on cherchais au même endroit que pour le server
+
+```
+[max@localhost nginx]$ ls -al /etc/nginx | grep nginx.conf
+```
+
+allons checker a cet endroit la 
+
+bingo 
+
+```
+[max@localhost nginx]$ ls -al /etc/nginx | grep nginx.conf
+-rw-r--r--.  1 root root 2334 Oct 31 16:37 nginx.conf
+-rw-r--r--.  1 root root 2656 Oct 31 16:37 nginx.conf.default
+```
+
+bon maintenant es que dedans il y a ce qui affiche cette veille page web qu'on a vu tt a l'heure
+
+```
+cat nginx.conf | grep server -A 16
+```
+
+```
+server {
+        listen       80;
+        listen       [::]:80;
+        server_name  _;
+        root         /usr/share/nginx/html;
+
+        # Load configuration files for the default server block.
+        include /etc/nginx/default.d/*.conf;
+
+        error_page 404 /404.html;
+        location = /404.html {
+        }
+
+        error_page 500 502 503 504 /50x.html;
+        location = /50x.html {
+        }
+    }
+```
+
+on y trouve même des lignes qui incluse d'atre fichié 
+
+```
+include /usr/share/nginx/modules/*.conf;
+    include             /etc/nginx/mime.types;
+    # See http://nginx.org/en/docs/ngx_core_module.html#include
+    include /etc/nginx/conf.d/*.conf;
+        include /etc/nginx/default.d/*.conf;
+#        include /etc/nginx/default.d/*.conf;
+```
+
+## 3. Déployer un nouveau site web
+
+bon on va créé un piti site tt mims 
+
+donc on créée des dossier dans le var 
+
+ici 
+
+![var](picture/var.jpeg)
+
+je rigole 
+
+dans le dossier comme ça 
+
+```
+sudo mkdir www
+```
+
+ainsi que 
+
+```
+sudo mkdir tp2_linux
+```
+
+on créé ensuite un fichié html
+
+```
+sudo touch index.html
+```
+
+et on mets ça dedans 
+
+```
+[max@localhost tp2_linux]$ cat index.html 
+<h1>MEOW mon premier serveur web</h1>
+```
+
+maintenant on va adpeter la conf de nginx 
+
