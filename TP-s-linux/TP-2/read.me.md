@@ -11,7 +11,9 @@
   - [1. Mise en place](#1-mise-en-place)
   - [2. Analyser la conf de NGINX](#2-analyser-la-conf-de-nginx)
   - [3. Déployer un nouveau site web](#3-déployer-un-nouveau-site-web)
-
+- [III. Your own services](#iii-your-own-services)
+  - [2. Analyse des services existants](#2-analyse-des-services-existants)
+  - [3. Création de service](#3-création-de-service)
 ## Checklist
 
 ip: OK
@@ -321,20 +323,16 @@ petit list all avec la ligne conserner
   ports: 19618/tcp 80/tcp
 ```
 
-```
-
-```
 
 ensuite sur quel port ecoute tu mon grand 
 
 hum...
 
 ```
-ss | grep nginx
+[max@localhost system]$ ss -l | grep 80
+tcp   LISTEN 0      511                                       0.0.0.0:80                   0.0.0.0:*
 ```
-
-
-
+il écoute bien sur le 80
 
 
 pour ce qui est du processus 
@@ -402,7 +400,7 @@ bon deja il est ou ???
 
 ![ilestou](picture/whereisit.gif)
 
-et si on cherchais au même endroit que pour le server
+après moulte recherche (10 seconde en vrai)
 
 ```
 [max@localhost nginx]$ ls -al /etc/nginx | grep nginx.conf
@@ -444,7 +442,7 @@ server {
     }
 ```
 
-on y trouve même des lignes qui incluse d'atre fichié 
+on y trouve même des lignes qui incluse d'autre fichié 
 
 ```
 include /usr/share/nginx/modules/*.conf;
@@ -467,7 +465,7 @@ ici
 
 je rigole 
 
-dans le dossier comme ça 
+dans le dossier var comme ça 
 
 ```
 sudo mkdir www
@@ -494,3 +492,211 @@ et on mets ça dedans
 
 maintenant on va adpeter la conf de nginx 
 
+on supprime la partie server vu avant et on créé un fichié de conf avec la commande 
+
+```
+touch siteweb.conf
+```
+
+on crée notre ficher de conf dans le dossier default.d
+
+et on inclu notre fichié de conf sur le fichié de conf principal 
+
+```
+include /etc/nginx/conf.d/siteweb.conf;
+```
+
+```
+[max@localhost default.d]$ ls -l
+total 0
+-rw-r--r--. 1 root root 0 Dec 30 19:35 siteweb.conf
+```
+
+et maintenant on tire un port au hasard avec 
+
+```
+echo $RANDOM
+```
+
+et ce sera le
+
+```
+[max@localhost conf.d]$ echo $RANDOM
+10971
+```
+
+10971
+
+ok maintenant on remplie le fichier de conf avec nos info a nous 
+
+```
+server {
+  listen 10971;
+
+  root /var/www/tp2_linux;
+}
+
+```
+
+le petit cat du fichier de conf 
+
+```
+[max@localhost conf.d]$ cat siteweb.conf 
+server {
+  listen 10971;
+
+  root /var/www/tp2_linux;
+}
+```
+
+on restart 
+
+```
+systemctl restart nginx
+```
+
+et on check
+
+avec un petit curl 
+
+```
+[max@localhost default.d]$ curl http://192.168.64.17:10971
+<h1>MEOW mon premier serveur web</h1>
+```
+
+et voilaaaaaa
+
+
+# III. Your own services
+
+créons notre propre service
+
+![ohyeah](picture/ohyeah.gif)
+
+## 2. Analyse des services existants
+
+on recupere le chemin pour le fichier sshd.service
+
+```
+[max@localhost /]$ systemctl status sshd
+Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; vendor preset: enabled)
+```
+
+j'ai pas tt mis mais c'est cette partie la qui m'interesse 
+
+on mets en evidence la ligne qui nous interesse avec un grep et ça donne ça 
+
+```
+[max@localhost system]$ cat sshd.service | grep ExecStart=
+ExecStart=/usr/sbin/sshd -D $OPTIONS
+```
+
+on fait la même chose avec nginx
+
+status on trouve le chemin et on cat 
+
+```
+[max@localhost system]$ cat nginx.service | grep ExecStart=
+ExecStart=/usr/sbin/nginx
+```
+
+## 3. Création de service
+
+bon on créé le fichier de notre service 
+
+petit cat une fois rempli
+
+```
+[max@localhost system]$ cat tp2_nc.service 
+[Unit]
+Description=Super netcat tout fou
+
+[Service]
+ExecStart=/usr/bin/nc -l 16415
+```
+
+on explique gentillement en toute gentillesse au system qu'on le custom avec cette commande 
+
+```
+sudo systemctl daemon-reload
+```
+
+et on demmarre le service
+
+petit status 
+
+```
+[max@localhost system]$ systemctl status tp2_nc
+● tp2_nc.service - Super netcat tout fou
+     Loaded: loaded (/etc/systemd/system/tp2_nc.service; static)
+     Active: active (running) since Sat 2022-12-31 00:35:48 CET; 4min 18s ago
+   Main PID: 1945 (nc)
+      Tasks: 1 (limit: 7412)
+     Memory: 740.0K
+        CPU: 4ms
+     CGroup: /system.slice/tp2_nc.service
+             └─1945 /usr/bin/nc -l 16415
+
+Dec 31 00:35:48 localhost.localdomain systemd[1]: Started Super netcat tout fou.
+```
+
+ça tourne bien il est tt mims tt va bien 
+
+petit ss
+
+```
+[max@localhost system]$ ss -l | grep 16415
+tcp   LISTEN 0      10                                        0.0.0.0:16415                   0.0.0.0:*          
+tcp   LISTEN 0      10                                           [::]:16415                      [::]:*
+```
+
+il écoute bien sur le port 16415 donc tt roule 
+
+bon checkon les logs de notre service un peu 
+
+ça c'est le log de start
+
+```
+Dec 31 01:06:32 localhost.localdomain systemd[1]: Started Super netcat tout fou.
+```
+ici le log de message (c'est fou)
+
+```
+Dec 31 01:02:22 localhost.localdomain nc[1409]: coucou
+```
+
+et ici le log de stop du service
+
+```
+Dec 31 01:06:24 localhost.localdomain systemd[1]: Stopped Super netcat tout fou.
+```
+
+ok bon c'est cool mais c'est relou que ça s'eteigne a chaque fois donc rejoutont une petite ligne qui empeche ça 
+
+donc on modifie le fichié de conf et tt va bien 
+
+```
+[max@localhost system]$ cat tp2_nc.service 
+[Unit]
+Description=Super netcat tout fou
+
+[Service]
+ExecStart=/usr/bin/nc -l 16415
+Restart=always
+```
+
+c'est la ligne Restart qui va s'en occuper 
+
+et bien sur on oublie pas de dire a notre system qu'on a modifier un truc 
+
+```
+[max@localhost system]$ sudo systemctl daemon-reload
+```
+
+et voila c'est tout pour moi 
+
+merci pour la lecture
+
+sur ce je vais dormir 
+
+![goodbye](picture/goodbye.gif)
