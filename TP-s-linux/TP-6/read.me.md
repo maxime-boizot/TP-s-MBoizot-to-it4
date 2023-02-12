@@ -484,3 +484,29 @@ voila une commande a utiliser lorsque l'ont souhaite deban une ip
 
 pas mal pour un premier dispositif de securiter 
 
+bon c'est écrit dans la doc mais le processus tourne sur le port 19999 
+
+```
+[max@web ~]$ sudo ss -lanput4 | grep netdata     
+tcp   LISTEN 0      4096                0.0.0.0:19999      0.0.0.0:*     users:(("netdata",pid=1440,fd=7))
+```
+
+le user maintenant
+
+```
+[max@web ~]$ ps -ef | grep netdata
+netdata     1440       1  4 23:26 ?        00:00:16 /usr/sbin/netdata -P /run/netdata/netdata.pid -D
+netdata     1443    1440  0 23:26 ?        00:00:00 /usr/sbin/netdata --special-spawn-server
+netdata     1613    1440  2 23:26 ?        00:00:09 /usr/libexec/netdata/plugins.d/go.d.plugin 1
+netdata     1620    1440  1 23:26 ?        00:00:06 /usr/libexec/netdata/plugins.d/apps.plugin 1
+netdata     1621    1440  0 23:26 ?        00:00:00 bash /usr/libexec/netdata/plugins.d/tc-qos-helper.sh 1
+max         1916    1827  0 23:32 pts/0    00:00:00 grep --color=auto netdata
+```
+
+netdata et max moi même ducoup pas de root 
+
+bon on check le site et effectivement l'iinterface est sexy de fouuuuu
+
+
+![sexy](picture/sexy.gif)
+
