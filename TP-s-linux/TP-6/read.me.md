@@ -4,6 +4,7 @@
 
 - [0. Setup](#0-setup)
 - [Module 1 : Reverse Proxy](#module-1--reverse-proxy)
+- [Module 2 : Sauvegarde du système de fichiers](#module-2--sauvegarde-du-système-de-fichiers)
 
 
 # 0. Setup 
@@ -298,4 +299,188 @@ PING 192.168.64.24 (192.168.64.24) 56(84) bytes of data.
 4 packets transmitted, 4 received, 0% packet loss, time 3008ms
 rtt min/avg/max/mdev = 1.961/5.199/10.293/3.274 ms
 ```
+
+ooook 
+
+
+
+# Module 2 : Sauvegarde du système de fichiers
+
+
+pour cette partie on va utilisé la vm web allez zepartie 
+
+![zebardi](picture/zebardi.gif)
+
+# Module 3 : Fail2Ban
+
+bon la c'est pas complique on va ban les gens qui brut force 
+
+![degage](picture/degage.gif)
+
+bon on instal fail2ban avec une commande dnf classic 
+
+```
+[max@web ~]$ sudo dnf install fail2ban fail2ban-firewalld
+[sudo] password for max: 
+
+[...]
+
+Complete!
+```
+
+on enable, start, et status 
+
+```
+[max@web ~]$ systemctl enable fail2ban.service 
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-unit-files ====
+Authentication is required to manage system service or unit files.
+Authenticating as: boizot maxime (max)
+Password: 
+==== AUTHENTICATION COMPLETE ====
+Created symlink /etc/systemd/system/multi-user.target.wants/fail2ban.service → /usr/lib/systemd/system/fail2ban.service.
+==== AUTHENTICATING FOR org.freedesktop.systemd1.reload-daemon ====
+Authentication is required to reload the systemd state.
+Authenticating as: boizot maxime (max)
+Password: 
+==== AUTHENTICATION COMPLETE ====
+[max@web ~]$ systemctl status fail2ban.service 
+○ fail2ban.service - Fail2Ban Service
+     Loaded: loaded (/usr/lib/systemd/system/fail2ban.service; enabled; vendor preset: disabled)
+     Active: inactive (dead)
+       Docs: man:fail2ban(1)
+[max@web ~]$ systemctl start fail2ban.service 
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ====
+Authentication is required to start 'fail2ban.service'.
+Authenticating as: boizot maxime (max)
+Password: 
+==== AUTHENTICATION COMPLETE ====
+[max@web ~]$ systemctl status fail2ban.service 
+● fail2ban.service - Fail2Ban Service
+     Loaded: loaded (/usr/lib/systemd/system/fail2ban.service; enabled; vendor preset: disabled)
+     Active: active (running) since Sun 2023-02-12 22:24:12 CET; 2s ago
+       Docs: man:fail2ban(1)
+    Process: 27072 ExecStartPre=/bin/mkdir -p /run/fail2ban (code=exited, status=0/SUCCESS)
+   Main PID: 27073 (fail2ban-server)
+      Tasks: 3 (limit: 7406)
+     Memory: 10.3M
+        CPU: 54ms
+     CGroup: /system.slice/fail2ban.service
+             └─27073 /usr/bin/python3 -s /usr/bin/fail2ban-server -xf start
+
+Feb 12 22:24:12 web systemd[1]: Starting Fail2Ban Service...
+Feb 12 22:24:12 web systemd[1]: Started Fail2Ban Service.
+Feb 12 22:24:12 web fail2ban-server[27073]: 2023-02-12 22:24:12,589 fail2ban.configreader   [27073]: WARNING 'allowipv6' not defined in 'Definition'.>
+Feb 12 22:24:12 web fail2ban-server[27073]: Server ready
+```
+
+ça c'est ok maintenant la conf 
+
+ok on ce rend dans le fichié de conf nommé 
+jail.conf porte bien son nom celui la 
+
+et on entre ce block la 
+
+```
+[sshd]
+enabled = true
+maxretry = 3
+findtime = 60
+bantime = 120
+```
+
+j'ai mis 2min de ban time pr test que je me fasse déban 
+
+on test
+
+```
+[max@db ~]$ ssh max@192.168.80.10
+max@192.168.80.10's password: 
+fPermission denied, please try again.
+max@192.168.80.10's password: 
+Permission denied, please try again.
+max@192.168.80.10's password: 
+max@192.168.80.10: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).
+[max@db ~]$ ssh max@192.168.80.10
+ssh: connect to host 192.168.80.10 port 22: Connection refused
+```
+
+![ban](picture/ban.gif)
+
+ok je me suis fait ban on attend 2 min et on reessaye 
+
+```
+[max@db ~]$ ssh max@192.168.80.10
+max@192.168.80.10's password: 
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Sun Feb 12 22:39:14 CET 2023 from 192.168.80.11 on ssh:notty
+There were 20 failed login attempts since the last successful login.
+Last login: Sun Feb 12 22:01:13 2023 from 192.168.80.1
+```
+
+ooook ça marche maintenant petite option en plus 
+
+ok voila un petite command sympa permetant de voir les banni en temps reel 
+
+```
+[max@web fail2ban]$ sudo fail2ban-client status sshd
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	3
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned:	0
+   |- Total banned:	1
+   `- Banned IP list:
+```
+
+je vais me refaire ban pour l'avoir rempli 
+
+```
+[max@web fail2ban]$ sudo fail2ban-client status sshd
+Status for the jail: sshd
+|- Filter
+|  |- Currently failed:	0
+|  |- Total failed:	6
+|  `- Journal matches:	_SYSTEMD_UNIT=sshd.service + _COMM=sshd
+`- Actions
+   |- Currently banned:	1
+   |- Total banned:	2
+   `- Banned IP list:	192.168.80.11
+```
+
+et voila l'ip de db 
+
+et si on checkai pendant un ban ce qu'il y a dans le firewall 
+
+```
+[max@web fail2ban]$ sudo firewall-cmd --list-all
+[sudo] password for max: 
+block
+  target: BLOCK
+  icmp-block-inversion: no
+  interfaces: enp0s1 enp0s2
+  sources: 
+  services: cockpit dhcpv6-client ssh
+  ports: 22/tcp
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule family="ipv4" source address="192.168.80.11" port port="ssh" protocol="tcp" reject type="icmp-port-unreachable"
+```
+
+on peut voir le ban sur la ligne rich rules
+
+```
+set sshd unbanip <ip_debanie>
+```
+
+voila une commande a utiliser lorsque l'ont souhaite deban une ip 
+
+pas mal pour un premier dispositif de securiter 
 
