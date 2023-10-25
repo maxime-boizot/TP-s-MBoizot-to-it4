@@ -227,7 +227,7 @@ bon pour la video youtube on doit recuper l'ip du server + le port qu'as ouvert 
 
 pour cela on fait une capture wireshark que voila 
 
-[🦈 le requin](/capture-1.pcapng)
+[🦈 le requin](/capture_yt.pcap)
 
 ```
 ip du server: 34.120.195.249
@@ -275,3 +275,69 @@ Authoritative answers can be found from:
 si c'est exat il s'agris de myvzw.com
 
 ![test](/img/fautquejelemettent.jpeg)
+
+ensuite on va determiner par combien de machine passe nos paquets quand on va sur `ynov.com` on va utiliser la command `traceroute`
+
+```
+maximeboizot@MacBook-pro-de-Maxime Desktop % traceroute www.ynov.com
+traceroute: Warning: www.ynov.com has multiple addresses; using 172.67.74.226
+traceroute to www.ynov.com (172.67.74.226), 64 hops max, 52 byte packets
+ 1  10.33.79.254 (10.33.79.254)  3.488 ms  2.955 ms  3.002 ms
+ 2  145.117.7.195.rev.sfr.net (195.7.117.145)  7.954 ms  2.629 ms  2.303 ms
+ 3  * * *
+ 4  196.224.65.86.rev.sfr.net (86.65.224.196)  9.460 ms  6.290 ms  4.918 ms
+ 5  12.148.6.194.rev.sfr.net (194.6.148.12)  11.800 ms
+    68.150.6.194.rev.sfr.net (194.6.150.68)  16.971 ms
+    12.148.6.194.rev.sfr.net (194.6.148.12)  14.055 ms
+ 6  12.148.6.194.rev.sfr.net (194.6.148.12)  13.856 ms
+    68.150.6.194.rev.sfr.net (194.6.150.68)  13.222 ms
+    12.148.6.194.rev.sfr.net (194.6.148.12)  12.263 ms
+ 7  141.101.67.48 (141.101.67.48)  14.216 ms  14.153 ms  11.338 ms
+ 8  141.101.67.54 (141.101.67.54)  11.749 ms
+    172.71.132.4 (172.71.132.4)  101.246 ms  11.525 ms
+ 9  172.67.74.226 (172.67.74.226)  10.691 ms  13.669 ms  11.787 ms
+```
+
+et tous cela nous permet de determiner qu'il y a 9 machine qui sont traverser par nos paquets
+
+suiiiite 
+
+l'ip publique de la passerelle ynov 
+
+un petit `curl` ?
+
+```
+maximeboizot@MacBook-pro-de-Maxime Desktop % curl ifconfig.me
+195.7.117.146 
+```
+
+et voila donc l'ip est `195.7.117.146`
+
+bon pour le scan reseau je essayer d'installer nmap avec brew et arp-scan ça ne veux pas brew est peter et je verrai avec toi plus tard la on passe a la suiite
+
+## III. Le requin
+
+![](/img/sniffing.gif)
+
+bien premiere capture un echange arp entre moi et la passerelle 
+
+[click here 🦈](/arp.pcap)
+
+rien de très compliquer on a juste mis un petit filtre `arp` poue afficher uniquement les paquets arp
+
+aller petite requet dns on lance wireshark et on lookup youtube tien
+
+et tadaaaa
+
+[click here 🦈](dns.pcap)
+
+pour ce qui est du filtre un simple dns et tt est bon
+
+et pour le tcp [c'est ici 🦈](/tcp.pcap)
+
+on lance la capture on ouvre safari et up le handshake du trafic et la fin de connexion 
+
+paaarfait 
+
+aller en route pour le prochain tp 
+
