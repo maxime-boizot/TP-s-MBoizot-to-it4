@@ -1,0 +1,5714 @@
+# Nmap 7.93 scan initiated Thu Nov  9 14:40:18 2023 as: nmap -A -p 22,80,443,21,25565,139,445 -v -oN Scan.txt 10.33.64.0/20
+
+Nmap scan report for 10.33.64.29
+Host is up (0.025s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.64.61
+Host is up (0.015s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.64.67
+Host is up (0.0074s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    open     http         Microsoft IIS httpd 10.0
+|_http-title: IIS Windows
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 10.33.64.69
+Host is up (0.0098s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    open     http         Microsoft IIS httpd 10.0
+|_http-title: Site doesn't have a title.
+|_http-server-header: Microsoft-IIS/10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 10.33.64.80
+Host is up (0.18s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.64.103
+Host is up (0.0084s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.64.121
+Host is up (0.48s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.64.126
+Host is up (0.040s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.31
+Host is up (0.32s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.48
+Host is up (0.098s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.79
+Host is up (0.012s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.94
+Host is up (0.011s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.95
+Host is up (0.027s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.96
+Host is up (0.014s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.99
+Host is up (0.044s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.100
+Host is up (0.070s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.101
+Host is up (0.041s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    open   http         Apache httpd 2.4.54 ((Unix) OpenSSL/1.0.2u PHP/8.2.0 mod_wsgi/3.5 Python/2.7.18 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1)
+|_http-server-header: Apache/2.4.54 (Unix) OpenSSL/1.0.2u PHP/8.2.0 mod_wsgi/3.5 Python/2.7.18 mod_fastcgi/mod_fastcgi-SNAP-0910052141 mod_perl/2.0.11 Perl/v5.30.1
+|_http-title: MAMP
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-favicon: Unknown favicon MD5: 22F07115F8763C615E2712737582579C
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.102
+Host is up (0.013s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    open   http         Apache httpd 2.4.56 ((Unix))
+| http-methods: 
+|_  Supported Methods: POST OPTIONS HEAD GET
+|_http-title: Site doesn't have a title (text/html).
+|_http-server-header: Apache/2.4.56 (Unix)
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.104
+Host is up (0.0091s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    open     http         Apache httpd 2.4.54 ((Win64) OpenSSL/1.1.1q PHP/8.1.10)
+|_http-server-header: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.1.10
+|_http-title: Laragon
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+139/tcp   filtered netbios-ssn
+443/tcp   open     http         Apache httpd 2.4.54 ((Win64) OpenSSL/1.1.1q PHP/8.1.10)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.1.10
+|_http-title: Laragon
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.65.109
+Host is up (0.024s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    closed   ssh
+80/tcp    open     http         Apache httpd 2.4.46 ((Fedora))
+|_http-server-header: Apache/2.4.46 (Fedora)
+| http-methods: 
+|   Supported Methods: OPTIONS HEAD GET POST TRACE
+|_  Potentially risky methods: TRACE
+|_http-title: Test Page for the HTTP Server on Fedora
+139/tcp   filtered netbios-ssn
+443/tcp   closed   https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.65.110
+Host is up (0.0096s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.111
+Host is up (0.025s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    open   http         Apache httpd 2.4.57 ((Ubuntu))
+|_http-server-header: Apache/2.4.57 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: HEAD GET POST OPTIONS
+|_http-title: Apache2 Ubuntu Default Page: It works
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.113
+Host is up (0.013s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    open     http         Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-title: IIS Windows
+|_http-server-header: Microsoft-IIS/10.0
+139/tcp   open     netbios-ssn  Microsoft Windows netbios-ssn
+443/tcp   filtered https
+445/tcp   open     microsoft-ds Windows 10 Home 22631 microsoft-ds (workgroup: WORKGROUP)
+| fingerprint-strings: 
+|   SMBProgNeg: 
+|_    SMBr
+25565/tcp filtered minecraft
+Service Info: Host: DESKTOP-GDRECVA; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| nbstat: NetBIOS name: DESKTOP-GDRECVA, NetBIOS user: <unknown>, NetBIOS MAC: 087190a249d7 (Intel Corporate)
+| Names:
+|   DESKTOP-GDRECVA<00>  Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   DESKTOP-GDRECVA<20>  Flags: <unique><active>
+|_  WORKGROUP<1e>        Flags: <group><active>
+| smb2-time: 
+|   date: 2023-11-09T13:45:49
+|_  start_date: N/A
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb-os-discovery: 
+|   OS: Windows 10 Home 22631 (Windows 10 Home 6.3)
+|   OS CPE: cpe:/o:microsoft:windows_10::-
+|   Computer name: DESKTOP-GDRECVA
+|   NetBIOS computer name: DESKTOP-GDRECVA\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2023-11-09T14:45:51+01:00
+|_clock-skew: mean: -19m55s, deviation: 34m29s, median: 0s
+
+Nmap scan report for 10.33.65.114
+Host is up (0.012s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.118
+Host is up (0.13s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.119
+Host is up (0.10s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   closed   https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.65.120
+Host is up (0.018s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.126
+Host is up (0.12s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.128
+Host is up (0.079s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.133
+Host is up (0.0074s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    closed   ssh
+80/tcp    closed   http
+139/tcp   filtered netbios-ssn
+443/tcp   closed   https
+445/tcp   filtered microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.65.134
+Host is up (0.0074s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    open   http         nginx 1.18.0 (Ubuntu)
+|_http-title: 502 Bad Gateway
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.33.65.137
+Host is up (0.10s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.138
+Host is up (0.040s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.142
+Host is up (0.015s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.144
+Host is up (0.013s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.145
+Host is up (0.0097s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.146
+Host is up (0.059s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.148
+Host is up (0.023s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.65.170
+Host is up (0.017s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.171
+Host is up (0.033s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.172
+Host is up (0.039s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.173
+Host is up (0.051s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.174
+Host is up (0.0084s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.179
+Host is up (0.052s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.180
+Host is up (0.15s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.181
+Host is up (0.072s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.184
+Host is up (0.050s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.187
+Host is up (0.056s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.194
+Host is up (0.095s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   closed   microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.65.197
+Host is up (0.19s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.201
+Host is up (0.013s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.203
+Host is up (0.018s latency).
+
+PORT      STATE    SERVICE       VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    open     http          Apache httpd 2.4.54 ((Win64) OpenSSL/1.1.1q PHP/8.1.10)
+|_http-server-header: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.1.10
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Laragon
+139/tcp   open     netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp   open     http          Apache httpd 2.4.54 ((Win64) OpenSSL/1.1.1q PHP/8.1.10)
+|_http-title: Laragon
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.54 (Win64) OpenSSL/1.1.1q PHP/8.1.10
+445/tcp   open     microsoft-ds?
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 403 Blocked by Bitdefender
+|     Content-Type: text/html
+|     Pragma: no-cache
+|     Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+|     Expires: Tue, 01 Jan 1971 02:00:00 GMT
+|_    Content-Length: 0
+25565/tcp filtered minecraft
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port445-TCP:V=7.93%I=7%D=11/9%Time=654CE269%P=x86_64-pc-linux-gnu%r(Fou
+SF:rOhFourRequest,CC,"HTTP/1\.1\x20403\x20Blocked\x20by\x20Bitdefender\r\n
+SF:Content-Type:\x20text/html\r\nPragma:\x20no-cache\r\nCache-Control:\x20
+SF:no-store,\x20no-cache,\x20must-revalidate,\x20max-age=0\r\nExpires:\x20
+SF:Tue,\x2001\x20Jan\x201971\x2002:00:00\x20GMT\r\nContent-Length:\x200\r\
+SF:n\r\n");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2023-11-09T13:45:55
+|_  start_date: N/A
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+|_clock-skew: 1s
+
+Nmap scan report for 10.33.65.210
+Host is up (0.11s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.212
+Host is up (0.042s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.213
+Host is up (0.0070s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.216
+Host is up (0.068s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.218
+Host is up (0.051s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.220
+Host is up (0.074s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.222
+Host is up (0.044s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.228
+Host is up (0.086s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.237
+Host is up (0.083s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.239
+Host is up (0.0087s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    open     http         Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-title: Site doesn't have a title.
+|_http-server-header: Microsoft-IIS/10.0
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 10.33.65.246
+Host is up (0.11s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.247
+Host is up (0.072s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.252
+Host is up (0.084s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   closed   netbios-ssn
+443/tcp   filtered https
+445/tcp   closed   microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.65.253
+Host is up (0.23s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.65.254
+Host is up (0.011s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.66.4
+Host is up (0.12s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.66.29
+Host is up (0.11s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.66.33
+Host is up (0.018s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    open   ssh          OpenSSH 8.9p1 Ubuntu 3ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 819ffa4624a2f8dfdc3f9b863a4557ac (ECDSA)
+|_  256 0d86c6628f0a8d8403277197e445595e (ED25519)
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.33.66.54
+Host is up (0.13s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.66.58
+Host is up (0.011s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.66.64
+Host is up (0.033s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.66.71
+Host is up (0.60s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.66.79
+Host is up (0.035s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.66.89
+Host is up (0.040s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+
+Host script results:
+|_clock-skew: -1m24s
+| smb2-security-mode: 
+|   302: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2023-11-09T13:44:29
+|_  start_date: N/A
+| nbstat: NetBIOS name: MACBOOKPRO-7F27, NetBIOS user: <unknown>, NetBIOS MAC: 147dda227f27 (Apple)
+| Names:
+|   MACBOOKPRO-7F27<00>  Flags: <unique><active>
+|   MACBOOKPRO-7F27<20>  Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+
+Nmap scan report for 10.33.66.94
+Host is up (0.053s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.66.98
+Host is up (0.038s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.66.106
+Host is up (0.019s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.66.109
+Host is up (0.027s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+
+Host script results:
+| nbstat: NetBIOS name: MACBOOK-BENDO, NetBIOS user: <unknown>, NetBIOS MAC: 5ce91ebe0a2c (Apple)
+| Names:
+|   MACBOOK-BENDO<00>    Flags: <unique><active>
+|   MACBOOK-BENDO<20>    Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+| smb2-security-mode: 
+|   302: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2023-11-09T13:44:29
+|_  start_date: N/A
+|_clock-skew: -1m25s
+
+Nmap scan report for 10.33.66.114
+Host is up (0.014s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   open   netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2023-11-09T13:45:56
+|_  start_date: N/A
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+|_clock-skew: 1s
+| nbstat: NetBIOS name: AYMERIC, NetBIOS user: <unknown>, NetBIOS MAC: 58065de0ca2f (unknown)
+| Names:
+|   AYMERIC<00>          Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|_  AYMERIC<20>          Flags: <unique><active>
+
+Nmap scan report for 10.33.66.115
+Host is up (0.23s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.66.116
+Host is up (0.25s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.66.133
+Host is up (0.035s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.66.157
+Host is up (0.041s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.66.160
+Host is up (0.16s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.66.166
+Host is up (0.32s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.66.168
+Host is up (0.087s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.66.200
+Host is up (0.0071s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    open     http         Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-title: IIS Windows
+|_http-server-header: Microsoft-IIS/10.0
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 10.33.66.203
+Host is up (0.051s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    open   ssh          OpenSSH 9.0p1 Ubuntu 1ubuntu8.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 6513c5684e63cbc98173505874cd7fcb (ECDSA)
+|_  256 a92e576a164cfe46fcd3f958f88da877 (ED25519)
+80/tcp    open   http         Apache httpd 2.4.55 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+|_http-server-header: Apache/2.4.55 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.33.66.206
+Host is up (0.023s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.66.208
+Host is up (0.12s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.66.248
+Host is up (0.0100s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    open   http         nginx 1.18.0 (Ubuntu)
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-title: Welcome to nginx!
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.33.67.3
+Host is up (0.060s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    open   ssh          OpenSSH 9.0 (protocol 2.0)
+| ssh-hostkey: 
+|   256 37f975437819a7ff1239a36465804d67 (ECDSA)
+|_  256 3d301c6d7b59034b05b6d3d0912602a5 (ED25519)
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.67.17
+Host is up (0.051s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    open   ssh          OpenSSH 8.9p1 Ubuntu 3ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 f60a349176644edb48ff5b79445f4feb (ECDSA)
+|_  256 6b30c60490759f72bf4f5ea260dbab6e (ED25519)
+80/tcp    open   http         Apache httpd 2.4.52 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+|_http-server-header: Apache/2.4.52 (Ubuntu)
+|_http-title: Apache2 Ubuntu Default Page: It works
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.33.67.22
+Host is up (0.064s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    open   ssh          OpenSSH 8.9p1 Ubuntu 3ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 743b37c65c9b788d91d85c49c6ca6fc2 (ECDSA)
+|_  256 35f279740a2cb7d5406e74361d2867f8 (ED25519)
+80/tcp    open   http         Apache httpd 2.4.52 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: OPTIONS HEAD GET POST
+|_http-title: Apache2 Ubuntu Default Page: It works
+|_http-server-header: Apache/2.4.52 (Ubuntu)
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.33.67.23
+Host is up (0.053s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.67.40
+Host is up (0.081s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.67.44
+Host is up (0.023s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    open   http         nginx
+|_http-title: Did not follow redirect to https://dev.local/
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+139/tcp   closed netbios-ssn
+443/tcp   open   ssl/http     nginx
+|_http-title: Laravel
+|_http-favicon: Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E
+| ssl-cert: Subject: commonName=*.local/CN=local/organizationName=Encelis/stateOrProvinceName=FR/countryName=FR
+| Subject Alternative Name: DNS:*.local, DNS:local
+| Issuer: commonName=*.local/CN=local/organizationName=Encelis/stateOrProvinceName=Paris/countryName=FR
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2019-07-17T08:34:18
+| Not valid after:  2029-07-14T08:34:18
+| MD5:   211a47b22f66286dbf8ab306738daafe
+|_SHA-1: b64a4b7b039040594821b0f04852bf0e4368c59d
+| http-methods: 
+|_  Supported Methods: GET HEAD
+| tls-alpn: 
+|_  http/1.1
+|_ssl-date: TLS randomness does not represent time
+| tls-nextprotoneg: 
+|_  http/1.1
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.67.67
+Host is up (0.026s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.67.81
+Host is up (0.072s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.67.90
+Host is up (0.037s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.67.127
+Host is up (0.16s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.67.131
+Host is up (0.060s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.67.133
+Host is up (0.0096s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    open     http         Node.js Express framework
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Skull King
+|_http-favicon: Unknown favicon MD5: C92B85A5B907C70211F4EC25E29A8C4A
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.67.138
+Host is up (0.0069s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    open   ssh          OpenSSH 8.2p1 Ubuntu 4ubuntu0.9 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 9382b8013586a3168ebd2cfb547303f9 (RSA)
+|   256 0e525bb90dcb640f9d380df8fab881e5 (ECDSA)
+|_  256 98045dc1b93e6ea94102b8a078fed4cc (ED25519)
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.33.67.144
+Host is up (0.0073s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.67.146
+Host is up (0.081s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.67.150
+Host is up (0.081s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.67.166
+Host is up (0.015s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   open   netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2023-11-09T13:45:55
+|_  start_date: N/A
+| nbstat: NetBIOS name: LAPTOP-VPED60LK, NetBIOS user: <unknown>, NetBIOS MAC: 586c257fa616 (Intel Corporate)
+| Names:
+|   LAPTOP-VPED60LK<20>  Flags: <unique><active>
+|   LAPTOP-VPED60LK<00>  Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.33.67.173
+Host is up (0.046s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.67.179
+Host is up (0.036s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.67.184
+Host is up (0.060s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.67.192
+Host is up (0.081s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.67.193
+Host is up (0.050s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    open   ssh          OpenSSH 8.9p1 Ubuntu 3ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 899a37b0c29b79fb9886450bfc7dfab3 (ECDSA)
+|_  256 f1ca8363d8b051e6630ac1524fc699ee (ED25519)
+80/tcp    open   http         Apache httpd 2.4.52 ((Ubuntu))
+|_http-server-header: Apache/2.4.52 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+|_http-title: Apache2 Ubuntu Default Page: It works
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.33.67.195
+Host is up (0.011s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    closed   ssh
+80/tcp    closed   http
+139/tcp   filtered netbios-ssn
+443/tcp   closed   https
+445/tcp   filtered microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.67.205
+Host is up (0.043s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.67.212
+Host is up (0.043s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.67.224
+Host is up (0.038s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.6
+Host is up (0.057s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.25
+Host is up (0.048s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.75
+Host is up (0.33s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.77
+Host is up (0.049s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.79
+Host is up (0.050s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.80
+Host is up (0.048s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.101
+Host is up (0.12s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.68.127
+Host is up (0.10s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    open   ssh          OpenSSH 9.2p1 Debian 2+deb12u1 (protocol 2.0)
+| ssh-hostkey: 
+|   256 fee50193b27560521d9d2186e36db35a (ECDSA)
+|_  256 e47e0c18001df2ef6fd17087764ab041 (ED25519)
+80/tcp    open   http         Apache httpd 2.4.57 ((Debian))
+|_http-title: Apache2 Debian Default Page: It works
+|_http-server-header: Apache/2.4.57 (Debian)
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.33.68.154
+Host is up (0.0075s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.68.159
+Host is up (0.14s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.68.166
+Host is up (0.017s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.174
+Host is up (0.027s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.177
+Host is up (0.0093s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.180
+Host is up (0.042s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.182
+Host is up (0.024s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.184
+Host is up (0.044s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.186
+Host is up (0.056s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.187
+Host is up (0.035s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    open   ssh           OpenSSH 8.6 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 8343838e393294027920b8131a0e86f2 (RSA)
+|   256 63c4fcf7c4377236adb80b30dad15869 (ECDSA)
+|_  256 44daa9a0b638f35bfa5d4baef6dd05ed (ED25519)
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+
+Host script results:
+| smb2-security-mode: 
+|   302: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2023-11-09T13:45:01
+|_  start_date: N/A
+| nbstat: NetBIOS name: MACBOOKPRO-F058, NetBIOS user: <unknown>, NetBIOS MAC: 3c22fbdff058 (Apple)
+| Names:
+|   MACBOOKPRO-F058<00>  Flags: <unique><active>
+|   MACBOOKPRO-F058<20>  Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+|_clock-skew: -55s
+
+Nmap scan report for 10.33.68.190
+Host is up (0.050s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   closed   netbios-ssn
+443/tcp   closed   https
+445/tcp   closed   microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.68.196
+Host is up (0.0087s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.202
+Host is up (0.029s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.217
+Host is up (0.054s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.221
+Host is up (0.013s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+
+Host script results:
+| smb2-time: 
+|   date: 2023-11-09T13:44:29
+|_  start_date: N/A
+| smb2-security-mode: 
+|   302: 
+|_    Message signing enabled and required
+| nbstat: NetBIOS name: MACBOOKPRO-20CA, NetBIOS user: <unknown>, NetBIOS MAC: a078178a20ca (Apple)
+| Names:
+|   MACBOOKPRO-20CA<00>  Flags: <unique><active>
+|   MACBOOKPRO-20CA<20>  Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+|_clock-skew: -1m27s
+
+Nmap scan report for 10.33.68.229
+Host is up (0.0095s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   open   netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-11-09T13:45:55
+|_  start_date: N/A
+| nbstat: NetBIOS name: LAPTOP-CJP6VUCR, NetBIOS user: <unknown>, NetBIOS MAC: 803049089f17 (Liteon Technology)
+| Names:
+|   LAPTOP-CJP6VUCR<20>  Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|_  LAPTOP-CJP6VUCR<00>  Flags: <unique><active>
+|_clock-skew: -1s
+
+Nmap scan report for 10.33.68.231
+Host is up (0.058s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.232
+Host is up (0.19s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.241
+Host is up (0.015s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.68.242
+Host is up (0.033s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.243
+Host is up (0.039s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.68.245
+Host is up (0.098s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.68.247
+Host is up (0.038s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.68.251
+Host is up (0.095s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.68.253
+Host is up (0.11s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.8
+Host is up (0.062s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.23
+Host is up (0.25s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.45
+Host is up (0.065s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   closed   netbios-ssn
+443/tcp   closed   https
+445/tcp   closed   microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.69.52
+Host is up (0.054s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.59
+Host is up (0.053s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.66
+Host is up (0.012s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.69.67
+Host is up (0.28s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.71
+Host is up (0.014s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.82
+Host is up (0.0098s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.84
+Host is up (0.020s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.94
+Host is up (0.15s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.111
+Host is up (0.077s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    closed   ssh
+80/tcp    closed   http
+139/tcp   filtered netbios-ssn
+443/tcp   closed   https
+445/tcp   filtered microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.69.117
+Host is up (0.11s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.120
+Host is up (0.10s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.128
+Host is up (0.012s latency).
+
+PORT      STATE    SERVICE       VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    open     http          Node.js Express framework
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-favicon: Unknown favicon MD5: C92B85A5B907C70211F4EC25E29A8C4A
+|_http-title: Skull King
+139/tcp   open     netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp   filtered https
+445/tcp   open     microsoft-ds?
+25565/tcp filtered minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2023-11-09T13:48:07
+|_  start_date: N/A
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| nbstat: NetBIOS name: LAPTOP-8TA98PF9, NetBIOS user: <unknown>, NetBIOS MAC: 2016b941ba27 (Intel Corporate)
+| Names:
+|   LAPTOP-8TA98PF9<00>  Flags: <unique><active>
+|   LAPTOP-8TA98PF9<20>  Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+
+Nmap scan report for 10.33.69.131
+Host is up (0.052s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   closed   netbios-ssn
+443/tcp   filtered https
+445/tcp   closed   microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.69.133
+Host is up (0.060s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.143
+Host is up (0.028s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.152
+Host is up (0.070s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.153
+Host is up (0.0087s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.198
+Host is up (0.025s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+
+Host script results:
+| smb2-time: 
+|   date: 2023-11-09T13:46:32
+|_  start_date: N/A
+|_clock-skew: -1m38s
+| nbstat: NetBIOS name: MACBOOKPRO-5C1C, NetBIOS user: <unknown>, NetBIOS MAC: f8ffc2275c1c (Apple)
+| Names:
+|   MACBOOKPRO-5C1C<00>  Flags: <unique><active>
+|   MACBOOKPRO-5C1C<20>  Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+| smb2-security-mode: 
+|   302: 
+|_    Message signing enabled and required
+
+Nmap scan report for 10.33.69.202
+Host is up (0.069s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.205
+Host is up (0.081s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.226
+Host is up (0.028s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.233
+Host is up (0.028s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.69.237
+Host is up (0.017s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.69.252
+Host is up (0.047s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.0
+Host is up (0.025s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.3
+Host is up (0.13s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.70.7
+Host is up (0.024s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.16
+Host is up (0.030s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.27
+Host is up (0.051s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   closed   netbios-ssn
+443/tcp   closed   https
+445/tcp   closed   microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.70.40
+Host is up (0.021s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.103
+Host is up (0.059s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.112
+Host is up (0.033s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.113
+Host is up (0.013s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.119
+Host is up (0.023s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.121
+Host is up (0.020s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    open   http         nginx 1.16.0
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.16.0
+|_http-title: Site Not Found
+139/tcp   closed netbios-ssn
+443/tcp   open   ssl/http     nginx 1.16.0
+| ssl-cert: Subject: commonName=modesign.local/organizationName=Super Fake Company, Fake./stateOrProvinceName=XX/countryName=XX
+| Subject Alternative Name: DNS:modesign.local, DNS:*.modesign.local
+| Issuer: commonName=modesign.local/organizationName=Super Fake Company, Fake./stateOrProvinceName=XX/countryName=XX
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-11-08T13:30:46
+| Not valid after:  2033-11-08T13:30:46
+| MD5:   7c01421259a6925bb95ac2dc11644c52
+|_SHA-1: f1dff4fce61476ea7f74682bc53106f80233f68c
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: nginx/1.16.0
+|_http-title: modesign
+|_http-generator: WordPress 6.4.1
+| tls-alpn: 
+|   h2
+|_  http/1.1
+|_ssl-date: TLS randomness does not represent time
+| http-robots.txt: 1 disallowed entry 
+|_/wp-admin/
+| tls-nextprotoneg: 
+|   h2
+|_  http/1.1
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.122
+Host is up (0.045s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    open   http         nginx 1.16.0
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-title: Site Not Found
+|_http-server-header: nginx/1.16.0
+139/tcp   closed netbios-ssn
+443/tcp   open   ssl/http     nginx 1.16.0
+| ssl-cert: Subject: commonName=angele.local/organizationName=Super Fake Company, Fake./stateOrProvinceName=XX/countryName=XX
+| Subject Alternative Name: DNS:angele.local, DNS:*.angele.local
+| Issuer: commonName=angele.local/organizationName=Super Fake Company, Fake./stateOrProvinceName=XX/countryName=XX
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-11-08T09:53:39
+| Not valid after:  2033-11-08T09:53:39
+| MD5:   2265bfd481edfc96dc82aa340cf5fd1a
+|_SHA-1: 8e1adb6ad7ec1ade2d22864b607dd67c531c4a08
+| tls-alpn: 
+|   h2
+|_  http/1.1
+| http-robots.txt: 1 disallowed entry 
+|_/wp-admin/
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: nginx/1.16.0
+|_http-generator: WordPress 6.4.1
+| tls-nextprotoneg: 
+|   h2
+|_  http/1.1
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-title: Balawai massage 
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.124
+Host is up (0.051s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.125
+Host is up (0.0078s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   open   netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-11-09T13:48:08
+|_  start_date: N/A
+| nbstat: NetBIOS name: DESKTOP-MK1V57C, NetBIOS user: <unknown>, NetBIOS MAC: 8c8d28f63317 (Intel Corporate)
+| Names:
+|   DESKTOP-MK1V57C<00>  Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|_  DESKTOP-MK1V57C<20>  Flags: <unique><active>
+
+Nmap scan report for 10.33.70.127
+Host is up (0.033s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.128
+Host is up (0.11s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.129
+Host is up (0.036s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.136
+Host is up (0.039s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.139
+Host is up (0.52s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.70.141
+Host is up (0.064s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    open   http          nginx 1.16.0
+|_http-server-header: nginx/1.16.0
+|_http-title: Site Not Found
+| http-methods: 
+|_  Supported Methods: GET HEAD
+139/tcp   closed netbios-ssn
+443/tcp   open   ssl/http      nginx 1.16.0
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+| tls-alpn: 
+|   h2
+|_  http/1.1
+| http-robots.txt: 1 disallowed entry 
+|_/wp-admin/
+|_ssl-date: TLS randomness does not represent time
+|_http-generator: WordPress 6.4.1
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+| ssl-cert: Subject: commonName=arioi.local/organizationName=Super Fake Company, Fake./stateOrProvinceName=XX/countryName=XX
+| Subject Alternative Name: DNS:arioi.local, DNS:*.arioi.local
+| Issuer: commonName=arioi.local/organizationName=Super Fake Company, Fake./stateOrProvinceName=XX/countryName=XX
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-11-08T09:20:02
+| Not valid after:  2033-11-08T09:20:02
+| MD5:   e191147c0dbdabe6116b111171d922d4
+|_SHA-1: e919c63b8ae7ef45229baaf474a146fbf68c6b86
+|_http-server-header: nginx/1.16.0
+| tls-nextprotoneg: 
+|   h2
+|_  http/1.1
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+
+Host script results:
+| smb2-time: 
+|   date: 2023-11-09T13:46:32
+|_  start_date: N/A
+| smb2-security-mode: 
+|   302: 
+|_    Message signing enabled and required
+|_clock-skew: -1m42s
+| nbstat: NetBIOS name: OAN-DESPRATS, NetBIOS user: <unknown>, NetBIOS MAC: 3c06302796e5 (Apple)
+| Names:
+|   OAN-DESPRATS<00>     Flags: <unique><active>
+|   OAN-DESPRATS<20>     Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+
+Nmap scan report for 10.33.70.160
+Host is up (0.039s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    open   ssh          OpenSSH 9.5 (protocol 2.0)
+| ssh-hostkey: 
+|   256 0728f4c174b66396c2fb994a437038a5 (ECDSA)
+|_  256 f8ad31c5ac48d04f818695f794b2ae13 (ED25519)
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.169
+Host is up (0.053s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.172
+Host is up (0.068s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    open     http         nginx 1.16.0
+|_http-title: Site Not Found
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.16.0
+139/tcp   filtered netbios-ssn
+443/tcp   open     ssl/http     nginx 1.16.0
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+| tls-alpn: 
+|   h2
+|_  http/1.1
+|_http-server-header: nginx/1.16.0
+| ssl-cert: Subject: commonName=basic-fit.local/organizationName=Super Fake Company, Fake./stateOrProvinceName=XX/countryName=XX
+| Subject Alternative Name: DNS:basic-fit.local, DNS:*.basic-fit.local
+| Issuer: commonName=basic-fit.local/organizationName=Super Fake Company, Fake./stateOrProvinceName=XX/countryName=XX
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-06-07T16:08:27
+| Not valid after:  2033-06-07T16:08:27
+| MD5:   0fb387c802ca79de6db68b8bea320d87
+|_SHA-1: 0798559761d0cefb1962058b187c7f62854fb70f
+|_http-title: Did not follow redirect to https://10.33.70.172:443/
+| tls-nextprotoneg: 
+|   h2
+|_  http/1.1
+|_ssl-date: TLS randomness does not represent time
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.70.188
+Host is up (0.028s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.192
+Host is up (0.0077s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   open   netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 2s
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| nbstat: NetBIOS name: 42UK1, NetBIOS user: <unknown>, NetBIOS MAC: c8b29b61440f (Intel Corporate)
+| Names:
+|   42UK1<00>            Flags: <unique><active>
+|   42UK1<20>            Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+| smb2-time: 
+|   date: 2023-11-09T13:48:16
+|_  start_date: N/A
+
+Nmap scan report for 10.33.70.225
+Host is up (0.0083s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.236
+Host is up (0.14s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.70.246
+Host is up (0.047s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   open   netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| nbstat: NetBIOS name: NOAH, NetBIOS user: <unknown>, NetBIOS MAC: 48684ab3700e (Intel Corporate)
+| Names:
+|   NOAH<20>             Flags: <unique><active>
+|   NOAH<00>             Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|_  \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-11-09T13:48:14
+|_  start_date: N/A
+
+Nmap scan report for 10.33.71.3
+Host is up (0.069s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   closed   netbios-ssn
+443/tcp   closed   https
+445/tcp   closed   microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.71.4
+Host is up (0.055s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.11
+Host is up (0.095s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.71.26
+Host is up (0.063s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   open   netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: -1s
+| smb2-time: 
+|   date: 2023-11-09T13:48:09
+|_  start_date: N/A
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| nbstat: NetBIOS name: MSI, NetBIOS user: <unknown>, NetBIOS MAC: 00410e2b915d (Cloud Network Technology Singapore PTE.)
+| Names:
+|   MSI<00>              Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|_  MSI<20>              Flags: <unique><active>
+
+Nmap scan report for 10.33.71.31
+Host is up (0.11s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.33
+Host is up (0.11s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.34
+Host is up (0.11s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.37
+Host is up (0.037s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.38
+Host is up (0.076s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.48
+Host is up (0.079s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   closed   netbios-ssn
+443/tcp   filtered https
+445/tcp   closed   microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.71.58
+Host is up (0.20s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.71.62
+Host is up (0.062s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.69
+Host is up (0.092s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.73
+Host is up (0.31s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.79
+Host is up (0.044s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    filtered ssh
+80/tcp    closed   http
+139/tcp   closed   netbios-ssn
+443/tcp   closed   https
+445/tcp   closed   microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.71.80
+Host is up (0.070s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.71.82
+Host is up (0.010s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.92
+Host is up (0.035s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.97
+Host is up (0.026s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.98
+Host is up (0.037s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.101
+Host is up (0.046s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.102
+Host is up (0.12s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    open     http         nginx 1.16.0
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.16.0
+|_http-title: Site Not Found
+139/tcp   filtered netbios-ssn
+443/tcp   open     ssl/http     nginx 1.16.0
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-title: Did not follow redirect to https://10.33.71.102:443/
+|_http-favicon: Unknown favicon MD5: 3342E211C891743436C1A3496B0B179E
+|_http-trane-info: Problem with XML parsing of /evox/about
+| ssl-cert: Subject: commonName=exercice-not.local/organizationName=Super Fake Company, Fake./stateOrProvinceName=XX/countryName=XX
+| Subject Alternative Name: DNS:exercice-not.local, DNS:*.exercice-not.local
+| Issuer: commonName=exercice-not.local/organizationName=Super Fake Company, Fake./stateOrProvinceName=XX/countryName=XX
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-11-08T09:03:20
+| Not valid after:  2033-11-08T09:03:20
+| MD5:   16d73c10358bbbb64475f8635d656031
+|_SHA-1: d67d6da4f637ace8fac6a8509a95a4bdca60a433
+| tls-nextprotoneg: 
+|   h2
+|_  http/1.1
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: nginx/1.16.0
+| tls-alpn: 
+|   h2
+|_  http/1.1
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.71.109
+Host is up (0.033s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.117
+Host is up (0.052s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.120
+Host is up (0.27s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.129
+Host is up (0.014s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.172
+Host is up (0.082s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.71.173
+Host is up (0.16s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.177
+Host is up (0.054s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    closed   ssh
+80/tcp    closed   http
+139/tcp   closed   netbios-ssn
+443/tcp   closed   https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.71.178
+Host is up (0.058s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.241
+Host is up (0.028s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.71.245
+Host is up (0.018s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+
+Host script results:
+| smb2-security-mode: 
+|   302: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2023-11-09T13:46:32
+|_  start_date: N/A
+|_clock-skew: -1m42s
+| nbstat: NetBIOS name: MACBOOKPRO-1BF3, NetBIOS user: <unknown>, NetBIOS MAC: c4910ca81bf3 (Apple)
+| Names:
+|   MACBOOKPRO-1BF3<00>  Flags: <unique><active>
+|   MACBOOKPRO-1BF3<20>  Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+
+Nmap scan report for 10.33.72.1
+Host is up (0.087s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.22
+Host is up (0.034s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.27
+Host is up (0.071s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.31
+Host is up (0.27s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.46
+Host is up (0.010s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+
+Host script results:
+|_clock-skew: -1m39s
+| nbstat: NetBIOS name: MACBOOKPRO-3C5E, NetBIOS user: <unknown>, NetBIOS MAC: a483e7763c5e (Apple)
+| Names:
+|   MACBOOKPRO-3C5E<00>  Flags: <unique><active>
+|   MACBOOKPRO-3C5E<20>  Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+| smb2-security-mode: 
+|   302: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2023-11-09T13:46:32
+|_  start_date: N/A
+
+Nmap scan report for 10.33.72.56
+Host is up (0.31s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.72.57
+Host is up (0.13s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.67
+Host is up (0.029s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.74
+Host is up (0.067s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.96
+Host is up (0.71s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    open   ssh          OpenSSH 9.3 (protocol 2.0)
+| ssh-hostkey: 
+|   256 f58c1e26bebc9800470d7b7f70f3c76a (ECDSA)
+|_  256 be88b8f783d621116dc3c4446f9a8ab1 (ED25519)
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.102
+Host is up (0.097s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.117
+Host is up (0.30s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.119
+Host is up (0.038s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.121
+Host is up (0.18s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.125
+Host is up (0.021s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.129
+Host is up (0.030s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.152
+Host is up (0.017s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.162
+Host is up (0.040s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.184
+Host is up (0.19s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.199
+Host is up (0.047s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.211
+Host is up (0.013s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.72.226
+Host is up (0.042s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.72.248
+Host is up (0.22s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.15
+Host is up (0.072s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.16
+Host is up (0.32s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.69
+Host is up (0.071s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.84
+Host is up (0.053s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.73.97
+Host is up (0.019s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.109
+Host is up (0.12s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.111
+Host is up (0.24s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.113
+Host is up (0.18s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.127
+Host is up (0.054s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.129
+Host is up (0.041s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.135
+Host is up (0.045s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.137
+Host is up (0.015s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.139
+Host is up (0.16s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.141
+Host is up (0.61s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.174
+Host is up (0.077s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.186
+Host is up (0.035s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.187
+Host is up (0.052s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.215
+Host is up (0.040s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.219
+Host is up (0.16s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.227
+Host is up (0.018s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.231
+Host is up (0.039s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.243
+Host is up (0.18s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.73.244
+Host is up (0.013s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   closed   microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.73.247
+Host is up (0.020s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.8
+Host is up (0.020s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.14
+Host is up (0.028s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.23
+Host is up (0.0077s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.46
+Host is up (0.045s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.62
+Host is up (0.025s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.89
+Host is up (0.066s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.126
+Host is up (0.022s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    closed   ssh
+80/tcp    closed   http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.74.134
+Host is up (0.069s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.139
+Host is up (2.3s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.146
+Host is up (0.21s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.151
+Host is up (0.22s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.177
+Host is up (0.038s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.179
+Host is up (0.11s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.226
+Host is up (0.047s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.246
+Host is up (0.014s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.248
+Host is up (0.020s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.249
+Host is up (0.019s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.254
+Host is up (0.076s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.74.255
+Host is up (0.17s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.0
+Host is up (0.061s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.4
+Host is up (0.057s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.6
+Host is up (0.012s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.11
+Host is up (0.012s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    open   ssh          OpenSSH 9.0p1 Ubuntu 1ubuntu8.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 c10a618140eb735141293afc883147ee (ECDSA)
+|_  256 758d675c41560a7f4809191ab8105c15 (ED25519)
+80/tcp    open   http         Golang net/http server (Go-IPFS json-rpc or InfluxDB API)
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.33.75.16
+Host is up (0.019s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    filtered ssh
+80/tcp    closed   http
+139/tcp   filtered netbios-ssn
+443/tcp   closed   https
+445/tcp   filtered microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.75.19
+Host is up (0.25s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.20
+Host is up (0.32s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.26
+Host is up (0.044s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.35
+Host is up (0.17s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    filtered ssh
+80/tcp    closed   http
+139/tcp   closed   netbios-ssn
+443/tcp   closed   https
+445/tcp   closed   microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.75.36
+Host is up (0.042s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.37
+Host is up (0.16s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.38
+Host is up (0.020s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.47
+Host is up (0.37s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.51
+Host is up (0.15s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.52
+Host is up (0.17s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.56
+Host is up (0.023s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.65
+Host is up (0.036s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.68
+Host is up (0.086s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.75.69
+Host is up (0.020s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    filtered ssh
+80/tcp    closed   http
+139/tcp   closed   netbios-ssn
+443/tcp   closed   https
+445/tcp   closed   microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.75.76
+Host is up (0.078s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.78
+Host is up (0.013s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.86
+Host is up (0.16s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.102
+Host is up (0.087s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.75.104
+Host is up (0.042s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.105
+Host is up (0.053s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.112
+Host is up (0.058s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.116
+Host is up (0.038s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    closed   ssh
+80/tcp    open     http         Golang net/http server (Go-IPFS json-rpc or InfluxDB API)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Did not follow redirect to https://10.33.75.116/
+139/tcp   filtered netbios-ssn
+443/tcp   open     ssl/http     Golang net/http server (Go-IPFS json-rpc or InfluxDB API)
+| ssl-cert: Subject: commonName=TRAEFIK DEFAULT CERT
+| Subject Alternative Name: DNS:dbbb9cfb1ac47f884c98857a69ca35b5.c5de8533d7e5347e83e0a333a2dd1de6.traefik.default
+| Issuer: commonName=TRAEFIK DEFAULT CERT
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-11-09T13:46:24
+| Not valid after:  2024-11-08T13:46:24
+| MD5:   4e514bd47e8486d3daeb47210da4335a
+|_SHA-1: b6a5a0c0c503fc6e762529e44ca85759ad544382
+|_ssl-date: TLS randomness does not represent time
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.75.124
+Host is up (0.068s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.125
+Host is up (0.059s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.127
+Host is up (0.056s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    closed   ssh
+80/tcp    closed   http
+139/tcp   closed   netbios-ssn
+443/tcp   closed   https
+445/tcp   closed   microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.75.133
+Host is up (0.048s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    filtered ssh
+80/tcp    closed   http
+139/tcp   closed   netbios-ssn
+443/tcp   closed   https
+445/tcp   closed   microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.75.135
+Host is up (0.11s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.75.136
+Host is up (0.073s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.140
+Host is up (0.20s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.156
+Host is up (0.13s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.171
+Host is up (0.0093s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.174
+Host is up (0.023s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.177
+Host is up (0.037s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.182
+Host is up (0.039s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.214
+Host is up (0.024s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.254
+Host is up (0.027s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.75.255
+Host is up (0.024s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.76.1
+Host is up (0.030s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.76.3
+Host is up (0.064s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.76.15
+Host is up (0.011s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.76.16
+Host is up (0.029s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.76.18
+Host is up (0.015s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.76.19
+Host is up (2.3s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.76.23
+Host is up (0.025s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.76.25
+Host is up (0.038s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.76.30
+Host is up (0.25s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.76.56
+Host is up (0.054s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.76.62
+Host is up (0.014s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.76.63
+Host is up (0.0092s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.76.69
+Host is up (0.048s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.76.87
+Host is up (0.070s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    closed   ssh
+80/tcp    closed   http
+139/tcp   filtered netbios-ssn
+443/tcp   closed   https
+445/tcp   filtered microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.76.96
+Host is up (0.13s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    closed   ssh
+80/tcp    filtered http
+139/tcp   closed   netbios-ssn
+443/tcp   closed   https
+445/tcp   closed   microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.76.159
+Host is up (3.7s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.76.176
+Host is up (0.019s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    open     http         Microsoft IIS httpd 10.0
+|_http-server-header: Microsoft-IIS/10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-title: 403 - Interdit\xA0: acc\xE8s refus\xE9.
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Nmap scan report for 10.33.76.180
+Host is up (0.092s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    open   ssh           OpenSSH 8.6 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 18196facfafaa4ce3277f5c3254d9108 (RSA)
+|   256 4ebd1d0c026b83e771c12aeaded047f0 (ECDSA)
+|_  256 bce5b2808875a1af50195f9f62bfbc27 (ED25519)
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+
+Host script results:
+| nbstat: NetBIOS name: MACBOOKPRO-DCE1, NetBIOS user: <unknown>, NetBIOS MAC: f45c89c3dce1 (Apple)
+| Names:
+|   MACBOOKPRO-DCE1<00>  Flags: <unique><active>
+|   MACBOOKPRO-DCE1<20>  Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+|_clock-skew: -2m17s
+| smb2-time: 
+|   date: 2023-11-09T13:48:53
+|_  start_date: N/A
+| smb2-security-mode: 
+|   302: 
+|_    Message signing enabled and required
+
+Nmap scan report for 10.33.76.189
+Host is up (0.013s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   open   netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2023-11-09T13:51:19
+|_  start_date: N/A
+| nbstat: NetBIOS name: SEIGNEURHUGOPCM, NetBIOS user: <unknown>, NetBIOS MAC: a05950b597cb (Intel Corporate)
+| Names:
+|   SEIGNEURHUGOPCM<00>  Flags: <unique><active>
+|   SEIGNEURHUGOPCM<20>  Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|_  WORKGROUP<1e>        Flags: <group><active>
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.33.76.200
+Host is up (0.0080s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   open   netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2023-11-09T13:51:14
+|_  start_date: N/A
+| nbstat: NetBIOS name: MATA_MILO, NetBIOS user: <unknown>, NetBIOS MAC: d4548ba52cdd (Intel Corporate)
+| Names:
+|   WORKGROUP<00>        Flags: <group><active>
+|   MATA_MILO<20>        Flags: <unique><active>
+|   MATA_MILO<00>        Flags: <unique><active>
+|_  WORKGROUP<1e>        Flags: <group><active>
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+
+Nmap scan report for 10.33.76.201
+Host is up (0.082s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.76.223
+Host is up (0.027s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.76.233
+Host is up (0.0063s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    open   ssh           OpenSSH for_Windows_8.6 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 3a5466715f9ed621a5019cb8518be371 (RSA)
+|   256 cd6d4b5ec61cca5c0334adba722fb433 (ECDSA)
+|_  256 fff37901fbb325f9dbfb98dbcc38012a (ED25519)
+80/tcp    closed http
+139/tcp   open   netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: -3s
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-11-09T13:51:13
+|_  start_date: N/A
+| nbstat: NetBIOS name: GUILLAUME, NetBIOS user: <unknown>, NetBIOS MAC: f8b54d43184a (Intel Corporate)
+| Names:
+|   GUILLAUME<20>        Flags: <unique><active>
+|   GUILLAUME<00>        Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+
+Nmap scan report for 10.33.77.55
+Host is up (0.020s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   closed   netbios-ssn
+443/tcp   closed   https
+445/tcp   closed   microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.77.62
+Host is up (0.012s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.77.103
+Host is up (0.14s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.77.148
+Host is up (0.065s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.77.165
+Host is up (0.18s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.77.187
+Host is up (0.16s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.77.206
+Host is up (0.047s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.77.222
+Host is up (0.048s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.77.242
+Host is up (0.030s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    closed   ssh
+80/tcp    closed   http
+139/tcp   filtered netbios-ssn
+443/tcp   closed   https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.77.245
+Host is up (0.0088s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.77.246
+Host is up (0.00036s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    open   ssh          OpenSSH 9.2p1 Debian 2+deb12u1 (protocol 2.0)
+| ssh-hostkey: 
+|   256 929ca66188c8747bbde897d7681f0cb3 (ECDSA)
+|_  256 f12292907f73f150aebb288663cd3463 (ED25519)
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Nmap scan report for 10.33.78.2
+Host is up (0.081s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+
+Host script results:
+| smb2-time: 
+|   date: 2023-11-09T13:48:53
+|_  start_date: N/A
+| smb2-security-mode: 
+|   302: 
+|_    Message signing enabled and required
+| nbstat: NetBIOS name: MACBOOKPRO-2221, NetBIOS user: <unknown>, NetBIOS MAC: 5c969d77a567 (Apple)
+| Names:
+|   MACBOOKPRO-2221<00>  Flags: <unique><active>
+|   MACBOOKPRO-2221<20>  Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+|_clock-skew: -2m21s
+
+Nmap scan report for 10.33.78.21
+Host is up (0.059s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.78.25
+Host is up (0.032s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.78.45
+Host is up (0.097s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   closed   netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.78.64
+Host is up (0.028s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.78.77
+Host is up (0.11s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.78.79
+Host is up (0.010s latency).
+
+PORT      STATE    SERVICE       VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    open     http          Node.js Express framework
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Skull King
+|_http-favicon: Unknown favicon MD5: C92B85A5B907C70211F4EC25E29A8C4A
+139/tcp   open     netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp   filtered https
+445/tcp   open     microsoft-ds?
+25565/tcp filtered minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| nbstat: NetBIOS name: PC-DE-MAXIMAUVE, NetBIOS user: <unknown>, NetBIOS MAC: c858c02722fc (Intel Corporate)
+| Names:
+|   PC-DE-MAXIMAUVE<20>  Flags: <unique><active>
+|   PC-DE-MAXIMAUVE<00>  Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|_  \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-11-09T13:51:14
+|_  start_date: N/A
+
+Nmap scan report for 10.33.78.85
+Host is up (0.049s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.78.87
+Host is up (0.057s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.78.88
+Host is up (0.076s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   closed   netbios-ssn
+443/tcp   closed   https
+445/tcp   closed   microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.78.103
+Host is up (0.0063s latency).
+
+PORT      STATE  SERVICE       VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   open   netbios-ssn   Microsoft Windows netbios-ssn
+443/tcp   closed https
+445/tcp   open   microsoft-ds?
+25565/tcp closed minecraft
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| nbstat: NetBIOS name: DESKTOP-5UENHO5, NetBIOS user: <unknown>, NetBIOS MAC: a4c3f0374ba5 (Intel Corporate)
+| Names:
+|   DESKTOP-5UENHO5<20>  Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|_  DESKTOP-5UENHO5<00>  Flags: <unique><active>
+| smb2-security-mode: 
+|   311: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-11-09T13:51:19
+|_  start_date: N/A
+
+Nmap scan report for 10.33.78.110
+Host is up (0.081s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.78.122
+Host is up (0.10s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    closed   ftp
+22/tcp    closed   ssh
+80/tcp    closed   http
+139/tcp   filtered netbios-ssn
+443/tcp   closed   https
+445/tcp   closed   microsoft-ds
+25565/tcp closed   minecraft
+
+Nmap scan report for 10.33.78.124
+Host is up (0.042s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.79.82
+Host is up (0.024s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.79.88
+Host is up (0.11s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.79.114
+Host is up (0.023s latency).
+
+PORT      STATE    SERVICE      VERSION
+21/tcp    filtered ftp
+22/tcp    filtered ssh
+80/tcp    filtered http
+139/tcp   filtered netbios-ssn
+443/tcp   filtered https
+445/tcp   filtered microsoft-ds
+25565/tcp filtered minecraft
+
+Nmap scan report for 10.33.79.115
+Host is up (0.43s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.79.121
+Host is up (0.078s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.79.122
+Host is up (0.041s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.79.126
+Host is up (0.087s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.79.127
+Host is up (0.16s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.79.132
+Host is up (0.031s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.79.136
+Host is up (0.20s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.79.157
+Host is up (0.42s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.79.158
+Host is up (1.9s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.79.184
+Host is up (0.15s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.79.214
+Host is up (0.047s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.79.221
+Host is up (0.031s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.79.226
+Host is up (0.062s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.79.233
+Host is up (0.078s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Nmap scan report for 10.33.79.239
+Host is up (0.031s latency).
+
+PORT      STATE  SERVICE      VERSION
+21/tcp    closed ftp
+22/tcp    closed ssh
+80/tcp    closed http
+139/tcp   closed netbios-ssn
+443/tcp   closed https
+445/tcp   closed microsoft-ds
+25565/tcp closed minecraft
+
+Post-scan script results:
+| clock-skew: 
+|   -1m42s: 
+|     10.33.70.141
+|     10.33.71.245
+|   -1s: 
+|     10.33.68.229
+|     10.33.71.26
+|   0s: 
+|     10.33.67.166
+|     10.33.65.113
+|     10.33.69.128
+|     10.33.70.246
+|     10.33.70.125
+|     10.33.78.103
+|     10.33.78.79
+|     10.33.76.189
+|     10.33.76.200
+|   1s: 
+|     10.33.66.114
+|_    10.33.65.203
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Nov  9 14:51:52 2023 -- 4096 IP addresses (413 hosts up) scanned in 694.17 seconds
