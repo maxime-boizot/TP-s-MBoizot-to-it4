@@ -1,8 +1,12 @@
 # TP3 SECU : SVP soyez cools
 
+- [TP3 SECU : SVP soyez cools](#tp2--environnement-virtuel)
+    - [1. on va voir si on peut ce brancher a des trucs](#1-on-va-voir-si-on-peut-ce-brancher-a-des-trucs)
+    - [2. les nmap](#2-les-nmap)
+
 Bon spoiler on a été cool maiiis on est passer pour des mec chelou en viteuf
 
-## on va voir si on peut ce brancher a des trucs 
+## 1. on va voir si on peut ce brancher a des trucs 
 
 Déja on a répertorier et cartographier en speed l'infra du bat et ça donne ça
 
@@ -28,9 +32,15 @@ donc celle-ci
 
 on a essayer les prise RJ45 jusqu'a ce qu'on trouve ça
 
-pour decrire ceci c'est un switch derierre les machines a café sur lequelle il reste pile une prise RJ45 sur laquelle nous connecter
+![](/TP-3/img/switch.png)
 
-on l'as fait et on pensais clairement pas trouver ça
+pour decrire ceci c'est un switch (ça ce vois je pense) derierre les machines a café du souk sur lequelle il reste pile une prise RJ45 sur laquelle nous connecter
+
+evidemment qu'on c'est brancher dessus
+
+et on a trouver des truc sympa
+
+voyons ça
 
 <!--resultat scan filaire switch machine a café-->
 ```
@@ -68,6 +78,24 @@ MAC Address: 00:08:DC:41:63:62 (Wiznet)
 Nmap scan report for DESKTOP-ODDOLFJ.lan
 (192.168.1.223)
 ```
+
+le teltonika c'est le switch
+
+et ce a quoi on s'attendais pas en ce branchant c'est qu'on a récuperer les ip des... 
+
+roulement de tambour 
+
+![](/TP-3/img/roulement-tambour.gif)
+
+les ligne avec ingenico c'est les mac et les ip des terminaux de paiment par carte des machines
+
+plutot sympa hein on a pas été plus loin mais pas peu fière
+
+bien c'est tt pour la partie physique 
+
+## 2. les nmap
+
+![](/TP-3/img/my-cat-was-hacking.gif)
 
 Grâce au scan NMAP du réseau nous avons pu récupérer des données tel que : 
 - OS des users
