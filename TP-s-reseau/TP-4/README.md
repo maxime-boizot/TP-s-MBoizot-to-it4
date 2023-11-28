@@ -51,9 +51,41 @@ Pong reçu : QueryAnswer(query=<Ether  dst=34:27:92:67:1e:1e src=c8:89:f3:ac:3b:
 
 pour le tcp cap voila le programme [click here](/TP-s-reseau/TP-4/tcp_cap.py)
 
+avec evidemment
+
+la sortie 
+
+```bash
+maximeboizot@MacBook-pro-de-Maxime TP-4 % python3 tcp_cap.py 
+WARNING: No IPv4 address found on anpi1 !
+WARNING: No IPv4 address found on anpi2 !
+WARNING: more No IPv4 address found on anpi0 !
+TCP SYN ACK reçu !
+- Adresse IP src : 178.32.154.7
+- Adresse IP dst : 10.33.75.254
+- Port TCP src : 443
+- Port TCP src : 53268
+```
+
 🌞 **`dns_cap.py`**
 
+on retouve ici le programme du [dns_cap](/TP-s-reseau/TP-4/dns_cap.py)
+
+et la syntaxe elle fait mal vraiment
+
+on oublie pas l'output
+
+```
+maximeboizot@MacBook-pro-de-Maxime TP-4 % python3 dns_cap.py
+WARNING: No IPv4 address found on anpi1 !
+WARNING: No IPv4 address found on anpi2 !
+WARNING: more No IPv4 address found on anpi0 !
+Adresse IP de la réponse DNS : 172.67.74.226
+```
+
 🌞 **`dns_lookup.py`**
+
+ 
 
 # II. ARP Poisoning
 
