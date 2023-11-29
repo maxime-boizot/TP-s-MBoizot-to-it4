@@ -85,18 +85,38 @@ Adresse IP de la réponse DNS : 172.67.74.226
 
 🌞 **`dns_lookup.py`**
 
- 
+le petit dns lookup [just here](/TP-s-reseau/TP-4/dns_lookup.py)
+
+et voici le resultat
+
+```bash
+maximeboizot@MacBook-pro-de-Maxime TP-4 % python3 dns_lookup.py ynov.com
+WARNING: No IPv4 address found on anpi1 !
+WARNING: No IPv4 address found on anpi2 !
+WARNING: more No IPv4 address found on anpi0 !
+Begin emission:
+Finished sending 1 packets.
+...*
+Received 4 packets, got 1 answers, remaining 0 packets
+dns reçu ! adresse ip :  172.67.74.226
+```
 
 # II. ARP Poisoning
 
 🌞 **`arp_poisoning.py`**
 
+le petit arp poissoning que je crois ne marche pas ou pas bien [click here](/TP-s-reseau/TP-4/arp_poisoning.py)
+
 # II. Exfiltration ICMP
 
 🌞 **`icmp_exf_send.py`**
 
+pour ce qui est du send le voila [click here](/TP-s-reseau/TP-4/icmp_exf_send.py)
+
+avec la petite preuve
+
+![petite photo preuve](/TP-s-reseau/TP-4/img/Image%2029-11-2023%20à%2011.40.jpg)
+
 🌞 **`icmp_exf_receive.py`**
 
-# III. Exfiltration DNS
-
-🌞 **`dns_exfiltration_send.py`**
+le receive [just here](/TP-s-reseau/TP-4/icmp_exf_receive.py)
