@@ -280,9 +280,3 @@ host (10.3.1.2) not reachable
 | `dhcp.tp3.b2` | `10.3.1.253/24` | 20   |
 
 🌞 **VM `dhcp.tp3.b2`**
-
-coucou
-
-
-
-ckcsskdcnsksc
