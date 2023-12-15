@@ -280,3 +280,71 @@ host (10.3.1.2) not reachable
 | `dhcp.tp3.b2` | `10.3.1.253/24` | 20   |
 
 🌞 **VM `dhcp.tp3.b2`**
+
+bien on configure notre server dhcp la routine etc et on install dhcpd 
+
+que l'ont conf comme si dessous 
+
+```bash
+[root@dhcp dhcp]# cat dhcpd.conf 
+default-lease-time 600;
+max-lease-time 7200;
+authoritative;
+subnet 10.3.1.0 netmask 255.255.255.0 {
+    range dynamic-bootp 10.3.1.100 10.3.1.200;
+}
+
+```
+
+ensuite on l'ajoute a gns3 etc
+
+on le mets bien dans le même lan que pc4, et pc5 lui sera dans le lan 20
+
+une fois ajouter dans gns3 on a juste a faire une command nul dans pc' et pouf 
+
+![dora](/TP-s-reseau/infra/tp-3/img/dora.gif)
+
+```bash
+PC4> ip dhcp
+DORA
+PC4> ip show IP 10.3.1.100/24
+Invalid address
+
+PC4> show ip
+
+NAME        : PC4[1]
+IP/MASK     : 10.3.1.100/24
+GATEWAY     : 0.0.0.0
+DNS         : 
+DHCP SERVER : 10.3.1.253
+DHCP LEASE  : 556, 573/286/501
+MAC         : 00:50:79:66:68:03
+LPORT       : 20017
+RHOST:PORT  : 127.0.0.1:20018
+MTU         : 1500
+```
+
+on va montrer ici que ça ne marche pas sur pc5
+
+```bash
+PC5> ip dhcp
+DDD
+Can't find dhcp server
+
+PC5> show ip 
+
+NAME        : PC5[1]
+IP/MASK     : 0.0.0.0/0
+GATEWAY     : 0.0.0.0
+DNS         : 
+MAC         : 00:50:79:66:68:04
+LPORT       : 20019
+RHOST:PORT  : 127.0.0.1:20020
+MTU         : 1500
+```
+
+et voilaaaa fiiiiniiiii
+
+vive le reseau 
+
+go to tp4
