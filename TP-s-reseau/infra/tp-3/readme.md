@@ -281,5 +281,3 @@ host (10.3.1.2) not reachable
 
 🌞 **VM `dhcp.tp3.b2`**
 
-
-test de petite modif a push
