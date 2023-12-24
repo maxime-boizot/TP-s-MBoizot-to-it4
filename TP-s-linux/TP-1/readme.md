@@ -242,15 +242,500 @@ af107e978371: Pull complete
 Digest: sha256:2bdc49f2f8ae8d8dc50ed00f2ee56d00385c6f8bc8a8b320d0a294d9e3b49026
 Status: Downloaded newer image for nginx:latest
 4eb5454e84ad4840507fe91747952f1bb5b637cb2c764ad4c220d43e9398bfd5
-max@debian:~$ docker ps
-CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                   NAMES
-4eb5454e84ad   nginx     "/docker-entrypoint.…"   33 seconds ago   Up 32 seconds   0.0.0.0:9999->80/tcp, :::9999->80/tcp   intelligent_haslett
 ```
 
 et a ceci je rajoute un ```docker ps```
 pour lister les process voir que tt est bien la
 
 
+```bash
+max@debian:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                   NAMES
+4eb5454e84ad   nginx     "/docker-entrypoint.…"   33 seconds ago   Up 32 seconds   0.0.0.0:9999->80/tcp, :::9999->80/tcp   intelligent_haslett
+```
+
+on peut checker les logs avec un simple docker logs *countainer id/containes name*
+
+```bash 
+max@debian:/etc$ docker logs 4eb5454e84ad
+/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+/docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+/docker-entrypoint.sh: Configuration complete; ready for start up
+2023/12/22 16:36:23 [notice] 1#1: using the "epoll" event method
+2023/12/22 16:36:23 [notice] 1#1: nginx/1.25.3
+2023/12/22 16:36:23 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/12/22 16:36:23 [notice] 1#1: OS: Linux 6.1.0-13-amd64
+2023/12/22 16:36:23 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/12/22 16:36:23 [notice] 1#1: start worker processes
+2023/12/22 16:36:23 [notice] 1#1: start worker process 29
+2023/12/22 16:36:23 [notice] 1#1: start worker process 30
+2023/12/22 16:36:23 [notice] 1#1: start worker process 31
+2023/12/22 16:36:23 [notice] 1#1: start worker process 32
+2023/12/22 16:36:23 [notice] 1#1: start worker process 33
+2023/12/22 16:36:23 [notice] 1#1: start worker process 34
+2023/12/22 16:36:23 [notice] 1#1: start worker process 35
+2023/12/22 16:36:23 [notice] 1#1: start worker process 36
+
+```
+
+on fait un petit *docker inspect avec l'id du container*
+
+```bash
+max@debian:/etc$ docker inspect 4eb5454e84ad
+[
+    {
+        "Id": "4eb5454e84ad4840507fe91747952f1bb5b637cb2c764ad4c220d43e9398bfd5",
+        "Created": "2023-12-22T16:36:22.704554884Z",
+        "Path": "/docker-entrypoint.sh",
+        "Args": [
+            "nginx",
+            "-g",
+            "daemon off;"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 11064,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-12-22T16:36:23.284602138Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:d453dd892d9357f3559b967478ae9cbc417b52de66b53142f6c16c8a275486b9",
+        "ResolvConfPath": "/var/lib/docker/containers/4eb5454e84ad4840507fe91747952f1bb5b637cb2c764ad4c220d43e9398bfd5/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/4eb5454e84ad4840507fe91747952f1bb5b637cb2c764ad4c220d43e9398bfd5/hostname",
+        "HostsPath": "/var/lib/docker/containers/4eb5454e84ad4840507fe91747952f1bb5b637cb2c764ad4c220d43e9398bfd5/hosts",
+        "LogPath": "/var/lib/docker/containers/4eb5454e84ad4840507fe91747952f1bb5b637cb2c764ad4c220d43e9398bfd5/4eb5454e84ad4840507fe91747952f1bb5b637cb2c764ad4c220d43e9398bfd5-json.log",
+        "Name": "/intelligent_haslett",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {
+                "80/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "9999"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                41,
+                188
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/b4fdc7672a1785242493878dc7185f30a1ab7888b65abc7f1d212b0203beea79-init/diff:/var/lib/docker/overlay2/a5e707579e1e8b396795f232e5316344b5b537e4d0243f458a242a44f45d74bb/diff:/var/lib/docker/overlay2/0eef57fd9945cfd3f3ac2784cf7b45969ef594c7d296582beec25b64c9046a44/diff:/var/lib/docker/overlay2/7c73728f22884d4af56e50053fa858823a9b8566fee28c056937d25db164ca03/diff:/var/lib/docker/overlay2/db9c162091b0ac0feb528e5313164fb617a622c359857bf6470e1d1958c9bd16/diff:/var/lib/docker/overlay2/1b2ffadffae779d69e32ca18d7a272322c7e4614180fe2d1589cda9bf00809fe/diff:/var/lib/docker/overlay2/078439da5c77d6e477b924a02daa91fcb03544cea5cd5136018bab9d83ef67f5/diff:/var/lib/docker/overlay2/199ca0e4b21e8455e7b03c76d29811cf0e84460a080877a894357b835fb670f6/diff",
+                "MergedDir": "/var/lib/docker/overlay2/b4fdc7672a1785242493878dc7185f30a1ab7888b65abc7f1d212b0203beea79/merged",
+                "UpperDir": "/var/lib/docker/overlay2/b4fdc7672a1785242493878dc7185f30a1ab7888b65abc7f1d212b0203beea79/diff",
+                "WorkDir": "/var/lib/docker/overlay2/b4fdc7672a1785242493878dc7185f30a1ab7888b65abc7f1d212b0203beea79/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "4eb5454e84ad",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NGINX_VERSION=1.25.3",
+                "NJS_VERSION=0.8.2",
+                "PKG_RELEASE=1~bookworm"
+            ],
+            "Cmd": [
+                "nginx",
+                "-g",
+                "daemon off;"
+            ],
+            "Image": "nginx",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "NGINX Docker Maintainers <docker-maint@nginx.com>"
+            },
+            "StopSignal": "SIGQUIT"
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "0cd0644437b4a500adeba58fba450cf53019e712c79c5b3ece74348c2beaa0bb",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "80/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "9999"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "9999"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/0cd0644437b4",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "f70b5dc1de9e6701ff3879b77626f2e9d130fbbaeac814073ae240b948b1f7ad",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:02",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "3ceac01a6390139b1290cec1e0760f2b7c3bd0de71ffaab117a997d288c38592",
+                    "EndpointID": "f70b5dc1de9e6701ff3879b77626f2e9d130fbbaeac814073ae240b948b1f7ad",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+```
+pour ce qui est du port d'écoute on fait un petit ```ss -lnpt```
+
+```bash
+max@debian:/$ sudo ss -lnpt | grep docker
+LISTEN 0      4096         0.0.0.0:9999      0.0.0.0:*    users:(("docker-proxy",pid=11016,fd=4))
+LISTEN 0      4096            [::]:9999         [::]:*    users:(("docker-proxy",pid=11023,fd=4))
+```
+
+firewall: on ajoute le port, on reload le firewall? et on verifie
+
+```bash
+max@debian:/etc$ sudo firewall-cmd --add-port=9999/tcp --permanent
+[sudo] Mot de passe de max : 
+success
+max@debian:/etc$ sudo firewall-cmd --reload
+success
+max@debian:/etc$ sudo firewall-cmd --list-all
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: wlp61s0
+  sources: 
+  services: dhcpv6-client ssh
+  ports: 9999/tcp
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+```
+
+quand on visite le site on tombe sur la page nginx logique 
+
+petit curl a l'appui
+
+```html
+max@debian:/etc$ curl http://192.168.0.37:9999
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+```
+
+bon on a ajouter notre conf et un site_nul et ça fonctionne 
+
+```bash
+max@debian:~/nginx$ docker run -d -p 9999:8080 -v /home/max/nginx/index.html:/var/www/html/index.html -v /home/max/nginx/site_nul.conf:/etc/nginx/conf.d/site_nul.conf nginx
+df42d6540311502fdec4440342b286bad90d361a16859fe19b1da2916612db79
+max@debian:~/nginx$ docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS                                               NAMES
+df42d6540311   nginx     "/docker-entrypoint.…"   8 seconds ago   Up 7 seconds   80/tcp, 0.0.0.0:9999->8080/tcp, :::9999->8080/tcp   determined_cannon
+max@debian:~/nginx$ docker logs df42d6540311
+/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+/docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+/docker-entrypoint.sh: Configuration complete; ready for start up
+2023/12/24 16:37:58 [notice] 1#1: using the "epoll" event method
+2023/12/24 16:37:58 [notice] 1#1: nginx/1.25.3
+2023/12/24 16:37:58 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2023/12/24 16:37:58 [notice] 1#1: OS: Linux 6.1.0-13-amd64
+2023/12/24 16:37:58 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/12/24 16:37:58 [notice] 1#1: start worker processes
+2023/12/24 16:37:58 [notice] 1#1: start worker process 29
+2023/12/24 16:37:58 [notice] 1#1: start worker process 30
+2023/12/24 16:37:58 [notice] 1#1: start worker process 31
+2023/12/24 16:37:58 [notice] 1#1: start worker process 32
+2023/12/24 16:37:58 [notice] 1#1: start worker process 33
+2023/12/24 16:37:58 [notice] 1#1: start worker process 34
+2023/12/24 16:37:58 [notice] 1#1: start worker process 35
+2023/12/24 16:37:58 [notice] 1#1: start worker process 36
+```
+
+et le petit curl qui va bien 
+
+```html
+max@debian:~/nginx$ curl http://192.168.0.37:9999
+<h1>MEOOOW</h1>
+```
+
+pas mal non 
+
+## 5. Un deuxieme conteneur en vif
+
+quand y en a un c'est bien mais quand y en a deux c'est meiuw
+
+et si on demarrai pyhton genre 
+
+bim 
+
+
+```bash
+max@debian:~/nginx$ docker run -it python bash
+Unable to find image 'python:latest' locally
+latest: Pulling from library/python
+bc0734b949dc: Pull complete 
+b5de22c0f5cd: Pull complete 
+917ee5330e73: Pull complete 
+b43bd898d5fb: Pull complete 
+7fad4bffde24: Pull complete 
+d685eb68699f: Pull complete 
+107007f161d0: Pull complete 
+02b85463d724: Pull complete 
+Digest: sha256:3733015cdd1bd7d9a0b9fe21a925b608de82131aa4f3d397e465a1fcb545d36f
+Status: Downloaded newer image for python:latest
+root@81e803bad9c2:/# ls 
+bin  boot  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@81e803bad9c2:/# ip a
+bash: ip: command not found
+root@81e803bad9c2:/#
+```
+
+on utilise pip pour installer les libs python 
+
+```bash 
+root@81e803bad9c2:/# pip install aiohttp
+Collecting aiohttp
+  Obtaining dependency information for aiohttp from https://files.pythonhosted.org/packages/75/5f/90a2869ad3d1fb9bd984bfc1b02d8b19e381467b238bd3668a09faa69df5/aiohttp-3.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading aiohttp-3.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.4 kB)
+Collecting attrs>=17.3.0 (from aiohttp)
+  Downloading attrs-23.1.0-py3-none-any.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.2/61.2 kB 435.7 kB/s eta 0:00:00
+Collecting multidict<7.0,>=4.5 (from aiohttp)
+  Downloading multidict-6.0.4.tar.gz (51 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.3/51.3 kB 386.1 kB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Installing backend dependencies ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting yarl<2.0,>=1.0 (from aiohttp)
+  Obtaining dependency information for yarl<2.0,>=1.0 from https://files.pythonhosted.org/packages/28/1c/bdb3411467b805737dd2720b85fd082e49f59bf0cc12dc1dfcc80ab3d274/yarl-1.9.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading yarl-1.9.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (31 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp)
+  Obtaining dependency information for frozenlist>=1.1.1 from https://files.pythonhosted.org/packages/0b/f2/b8158a0f06faefec33f4dff6345a575c18095a44e52d4f10c678c137d0e0/frozenlist-1.4.1-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata
+  Downloading frozenlist-1.4.1-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+Collecting aiosignal>=1.1.2 (from aiohttp)
+  Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting idna>=2.0 (from yarl<2.0,>=1.0->aiohttp)
+  Obtaining dependency information for idna>=2.0 from https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl.metadata
+  Downloading idna-3.6-py3-none-any.whl.metadata (9.9 kB)
+Downloading aiohttp-3.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 376.0 kB/s eta 0:00:00
+Downloading frozenlist-1.4.1-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (281 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 281.5/281.5 kB 405.0 kB/s eta 0:00:00
+Downloading yarl-1.9.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (322 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.4/322.4 kB 413.8 kB/s eta 0:00:00
+Downloading idna-3.6-py3-none-any.whl (61 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.6/61.6 kB 434.8 kB/s eta 0:00:00
+Building wheels for collected packages: multidict
+  Building wheel for multidict (pyproject.toml) ... done
+  Created wheel for multidict: filename=multidict-6.0.4-cp312-cp312-linux_x86_64.whl size=114916 sha256=2c67c438f55e6f2cc07a770b5ac8f947e6be615cff8a8825723d456f1bfb6978
+  Stored in directory: /root/.cache/pip/wheels/f6/d8/ff/3c14a64b8f2ab1aa94ba2888f5a988be6ab446ec5c8d1a82da
+Successfully built multidict
+Installing collected packages: multidict, idna, frozenlist, attrs, yarl, aiosignal, aiohttp
+Successfully installed aiohttp-3.9.1 aiosignal-1.3.1 attrs-23.1.0 frozenlist-1.4.1 idna-3.6 multidict-6.0.4 yarl-1.9.4
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 23.2.1 -> 23.3.2
+[notice] To update, run: pip install --upgrade pip
+root@81e803bad9c2:/# pip install aioconsole
+Collecting aioconsole
+  Obtaining dependency information for aioconsole from https://files.pythonhosted.org/packages/f7/39/b392dc1a8bb58342deacc1ed2b00edf88fd357e6fdf76cc6c8046825f84f/aioconsole-0.7.0-py3-none-any.whl.metadata
+  Downloading aioconsole-0.7.0-py3-none-any.whl.metadata (5.3 kB)
+Downloading aioconsole-0.7.0-py3-none-any.whl (30 kB)
+Installing collected packages: aioconsole
+Successfully installed aioconsole-0.7.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+
+[notice] A new release of pip is available: 23.2.1 -> 23.3.2
+[notice] To update, run: pip install --upgrade pip
+root@81e803bad9c2:/# sudo pip install aioconsole
+bash: sudo: command not found
+root@81e803bad9c2:/# python
+Python 3.12.1 (main, Dec 19 2023, 20:14:15) [GCC 12.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+```
+
+le petit interpreteur
+
+```bash
+root@81e803bad9c2:/# python
+Python 3.12.1 (main, Dec 19 2023, 20:14:15) [GCC 12.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+```
+
+et l'import des lib 
+
+```bash
+>>> import aiohttp
+>>> import aioconsole
+```
 
 # II. Images
 
