@@ -739,8 +739,175 @@ et l'import des lib
 
 # II. Images
 
+- [II. Images](#ii-images)
+  - [1. Images publiques](#1-images-publiques)
+  - [2. Construire une image](#2-construire-une-image)
 
+## 1. Images publiques
+
+bon on recupere les images demander on peut les recuperr avec un docker pull
+
+```bash
+max@debian:~/nginx$ docker pull python:3.11
+3.11: Pulling from library/python
+bc0734b949dc: Already exists 
+b5de22c0f5cd: Already exists 
+917ee5330e73: Already exists 
+b43bd898d5fb: Already exists 
+7fad4bffde24: Already exists 
+1f68ce6a3e62: Pull complete 
+e27d998f416b: Pull complete 
+fefdcd9854bf: Pull complete 
+Digest: sha256:4e5e9b05dda9cf699084f20bb1d3463234446387fa0f7a45d90689c48e204c83
+Status: Downloaded newer image for python:3.11
+docker.io/library/python:3.11
+```
+ici python avec la version specifier en 3.11
+
+et on recupere pareil pour my sql 
+
+pour ce qui est de wordpress on recupere la derniere version donc on mets le tag *:latest*
+
+
+```bash
+max@debian:~/nginx$ docker pull wordpress:latest
+latest: Pulling from library/wordpress
+af107e978371: Already exists 
+6480d4ad61d2: Pull complete 
+95f5176ece8b: Pull complete 
+0ebe7ec824ca: Pull complete 
+673e01769ec9: Pull complete 
+74f0c50b3097: Pull complete 
+1a19a72eb529: Pull complete 
+50436df89cfb: Pull complete 
+8b616b90f7e6: Pull complete 
+df9d2e4043f8: Pull complete 
+d6236f3e94a1: Pull complete 
+59fa8b76a6b3: Pull complete 
+99eb3419cf60: Pull complete 
+22f5c20b545d: Pull complete 
+1f0d2c1603d0: Pull complete 
+4624824acfea: Pull complete 
+79c3af11cab5: Pull complete 
+e8d8239610fb: Pull complete 
+a1ff013e1d94: Pull complete 
+31076364071c: Pull complete 
+87728bbad961: Pull complete 
+Digest: sha256:ffabdfe91eefc08f9675fe0e0073b2ebffa8a62264358820bcf7319b6dc09611
+Status: Downloaded newer image for wordpress:latest
+docker.io/library/wordpress:latest
+```
+
+et on list toute les image avec un *docker images*
+
+```bash
+max@debian:~/nginx$ docker images
+REPOSITORY           TAG       IMAGE ID       CREATED        SIZE
+linuxserver/wikijs   latest    869729f6d3c5   10 days ago    441MB
+mysql                5.7       5107333e08a8   12 days ago    501MB
+python               latest    fc7a60e86bae   2 weeks ago    1.02GB
+wordpress            latest    fd2f5a0c6fba   2 weeks ago    739MB
+python               3.11      22140cbb3b0c   2 weeks ago    1.01GB
+nginx                latest    d453dd892d93   2 months ago   187MB
+hello-world          latest    d2c94e258dcb   7 months ago   13.3kB
+```
+
+on peut voir toute les images telecharger sur ma machine leur version leur tailles etc...
+
+on lance un petit container avec python 3.11
+
+```bash
+max@debian:~/nginx$ docker run -it python:3.11 bash
+root@0e7a7bac67b2:/# python -V
+Python 3.11.7
+```
+
+
+## 2. Construire une image
+
+bon construire une image c'est chaint j'en ai chier avec une grippe c'est du fun bref 
+
+on a ici le petit docker files et le contener qui run bien comme il faut (es autres y sont plus mon pc s'est eteit oups)
+
+
+```bash
+max@debian:~/python_app_build$ sudo docker build . -t python_app:version_de_ouf
+[+] Building 584.8s (12/12) FINISHED                                                                                                                                         docker:default
+ => [internal] load .dockerignore                                                                                                                                                      0.0s
+ => => transferring context: 2B                                                                                                                                                        0.0s
+ => [internal] load build definition from Dockerfile                                                                                                                                   0.0s
+ => => transferring dockerfile: 652B                                                                                                                                                   0.0s
+ => [internal] load metadata for docker.io/library/debian:bullseye-slim                                                                                                                0.5s
+ => [1/7] FROM docker.io/library/debian:bullseye-slim@sha256:d3d0d14f49b49a4dd98a436711f5646dc39e1c99203ef223d1b6620061e2c0e5                                                        116.9s
+ => => resolve docker.io/library/debian:bullseye-slim@sha256:d3d0d14f49b49a4dd98a436711f5646dc39e1c99203ef223d1b6620061e2c0e5                                                          0.0s
+ => => sha256:634e16cb03ae927ff6e94ef9db8adae6749a3c9d9cc2e8c6e880ba83a291a85d 1.46kB / 1.46kB                                                                                         0.0s
+ => => sha256:b5a0d5c14ba9ece1eecd5137c468d9a123372b0af2ed2c8c4446137730c90e5b 31.42MB / 31.42MB                                                                                     115.7s
+ => => sha256:d3d0d14f49b49a4dd98a436711f5646dc39e1c99203ef223d1b6620061e2c0e5 1.85kB / 1.85kB                                                                                         0.0s
+ => => sha256:4b48997afc712259da850373fdbc60315316ee72213a4e77fc5a66032d790b2a 529B / 529B                                                                                             0.0s
+ => => extracting sha256:b5a0d5c14ba9ece1eecd5137c468d9a123372b0af2ed2c8c4446137730c90e5b                                                                                              1.0s
+ => [internal] load build context                                                                                                                                                      0.0s
+ => => transferring context: 27B                                                                                                                                                       0.0s
+ => [2/7] RUN apt-get update                                                                                                                                                          33.0s
+ => [3/7] RUN apt-get install -y python3 python3-pip python3-venv                                                                                                                    426.6s
+ => [4/7] WORKDIR /app                                                                                                                                                                 0.1s 
+ => [5/7] COPY app.py /app/                                                                                                                                                            0.1s 
+ => [6/7] RUN python3 -m venv venv                                                                                                                                                     2.1s 
+ => [7/7] RUN /app/venv/bin/python3 -m pip install emoji                                                                                                                               3.5s 
+ => exporting to image                                                                                                                                                                 1.9s 
+ => => exporting layers                                                                                                                                                                1.9s 
+ => => writing image sha256:550be2cb44e8af1b8c29e073f1d7207b131e6df8abbc46ed7d97ddf6cbfc9e69                                                                                           0.0s 
+ => => naming to docker.io/library/python_app:version_de_ouf                                                                                                                           0.0s
+max@debian:~/python_app_build$ docker run python_app:version_de_ouf
+Cet exemple d'application est vraiment naze 👎
+
+```
 
 # III. Docker compose
 
-[Document dédié à l'utilisation de `docker-compose`.](./compose.md)
+
+bon docker composer maintenant 
+
+pouf 
+
+
+```bash 
+max@debian:~$ touch docker-compose.yml
+max@debian:~$ mkdir ^C
+max@debian:~$ mkdir compose_test
+max@debian:~$ mv docker-compose.yml compose_test/
+max@debian:~$ ls -l
+total 52
+drwxr-xr-x 5 max max 4096 Jan  5 12:14  Bureau
+drwxr-xr-x 3 max max 4096 Dec  8 09:56  Documents
+drwxr-xr-x 7 max max 4096 Dec  7 11:32  GNS3
+drwxr-xr-x 2 max max 4096 Dec  5 11:39  Images
+drwxr-xr-x 2 max max 4096 Dec  5 11:39 'Mod'$'\303\250''les'
+drwxr-xr-x 2 max max 4096 Dec  5 11:39  Musique
+drwxr-xr-x 2 max max 4096 Dec  5 11:39  Public
+drwxr-xr-x 2 max max 4096 Jan  5 12:25 'T'$'\303\251''l'$'\303\251''chargements'
+drwxr-xr-x 2 max max 4096 Dec  5 11:39 'Vid'$'\303\251''os'
+drwx------ 4 max max 4096 Dec 15 12:15 'VirtualBox VMs'
+drwxr-xr-x 2 max max 4096 Jan 10 05:32  compose_test
+drwxr-xr-x 2 max max 4096 Dec 24 17:11  nginx
+drwxr-xr-x 2 max max 4096 Jan 10 05:14  python_app_build
+max@debian:~$ cd compose_test/
+max@debian:~/compose_test$ ls -l
+total 0
+-rw-r--r-- 1 max max 0 Jan 10 05:31 docker-compose.yml
+max@debian:~/compose_test$ nano docker-compose.yml 
+max@debian:~/compose_test$ docker compose up -d
+[+] Running 3/3
+ ✔ conteneur_nul 1 layers [⣿]      0B/0B      Pulled                                                                                                                                   4.4s 
+   ✔ bc0734b949dc Already exists                                                                                                                                                       0.0s 
+ ✔ conteneur_flopesque Pulled                                                                                                                                                          4.8s 
+[+] Running 3/3
+ ✔ Network compose_test_default                  Created                                                                                                                               0.2s 
+ ✔ Container compose_test-conteneur_nul-1        Started                                                                                                                               0.1s 
+ ✔ Container compose_test-conteneur_flopesque-1  Started                                                                                                                               0.1s 
+max@debian:~/compose_test$ docker ps
+CONTAINER ID   IMAGE     COMMAND        CREATED          STATUS          PORTS     NAMES
+20536ed4faeb   debian    "sleep 9999"   24 seconds ago   Up 23 seconds             compose_test-conteneur_flopesque-1
+c1c763ec29eb   debian    "sleep 9999"   24 seconds ago   Up 23 seconds             compose_test-conteneur_nul-1
+```
+
+donc la en gros je crée le docker compose avec la conf que le grand meo nous donne et je le up sans soucis.
