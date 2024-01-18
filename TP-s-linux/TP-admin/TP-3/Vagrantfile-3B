@@ -1,0 +1,25 @@
+vms = [
+  { name: "node1", hostname: "alice.tp3.b2", ip: "10.3.1.11" , interface_type: "nat" },
+  { name: "node2", hostname: "bob.tp3.b2", ip: "10.3.1.12" , interface_type: "nat" },
+  { name: "node3", hostname: "eve.tp3.b2", ip: "10.3.1.13" , interface_type: "hostonly" }
+]
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "super_box"
+  vms.each do |vm|
+    config.vm.define vm[:name] do |node|
+		case vm[:interface_type]
+		when "nat"
+		  node.vm.network "public_network", type: "static" , ip: vm[:ip]
+		when "hostonly"
+		  node.vm.network "private_network", type: "static" , ip: vm[:ip]
+		else
+		  raise "Type d'interface non pris en charge : #{vm[:interface_type]}"
+		end
+      node.vm.hostname = vm[:hostname]
+      node.vm.provider "virtualbox" do |vb|
+        vb.memory = "1024"
+      end
+    end
+  end
+end

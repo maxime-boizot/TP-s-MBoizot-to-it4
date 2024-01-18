@@ -243,4 +243,13 @@ now on va adapter le Vagrantfile pour qu'il lance 3 vms avec un boucle for
 [or click here to see the Vagrantfile](/TP-s-linux/TP-admin/TP-3/Vagrantfile-3A)
 
 
+![eheh](/TP-s-linux/TP-admin/TP-3/img/ehe.gif)
+
+now on va l'adapter pour utilise une liste en début de fichier avec les données des vms avec le for sur cette liste
+
+bon et bien tout fonctionne on a bien bob alice et eve qui celance exactement avec ce qu'on leur demande
+
+[tu peuc clicker ici pour voir le Vagrantfile](/TP-s-linux/TP-admin/TP-3/Vagrantfile-3B)
+
+et voila c'est tout pour ce tp ma foi 
 
