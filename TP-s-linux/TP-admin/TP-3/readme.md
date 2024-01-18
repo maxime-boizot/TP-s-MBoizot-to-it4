@@ -234,5 +234,13 @@ end
 
 il est super simple le petit Vagrantfile 
 
-🌞 **Adaptez votre `Vagrantfile`** 
+now on va adapter le Vagrantfile pour qu'il lance 3 vms avec un boucle for 
+
+[click here to see the Vagrantfile](https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs)
+
+
+
+[or click here to see the Vagrantfile](/TP-s-linux/TP-admin/TP-3/Vagrantfile-3A)
+
+
 

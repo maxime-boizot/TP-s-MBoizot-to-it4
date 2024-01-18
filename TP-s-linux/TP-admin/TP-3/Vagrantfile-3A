@@ -1,0 +1,12 @@
+Vagrant.configure("2") do |config|
+	config.vm.box = "super_box"
+	(1..3).each do |i|
+	  config.vm.define "node#{i}.tp3.b2" do |vm|
+		vm.vm.network "public_network", type: "static", ip: "10.3.1.#{10 + i}"
+		vm.vm.hostname = "node#{i}.tp3.b2"
+  		vm.vm.provider "virtualbox" do |vb|
+		  vb.memory = "1024"
+		end
+	  end
+	end
+  end
