@@ -429,4 +429,3 @@ wow c'est ecrit en haut
 `● chronyd.service - NTP client/server`
 
 bim trouver et bha mtn maintenant on va ce connecter au server fr du ntp pool project
-
