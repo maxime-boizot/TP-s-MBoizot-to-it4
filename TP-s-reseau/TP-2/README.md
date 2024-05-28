@@ -104,7 +104,7 @@ traceroute to node1.lan2.tp2 (10.1.2.11), 30 hops max, 60 byte packets
 
 # II. Interlude accès internet
 
-![No internet](./img/no%20internet.jpg)
+
 
 
 ☀️ **Sur `router.tp2`**

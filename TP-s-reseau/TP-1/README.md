@@ -90,7 +90,7 @@ c'est compliquer
 
 il faut faire plain de manip relou et tout 
 
-![jedeconne](/img/jedeconne.gif)
+![jedeconne](/TP-s-reseau/TP-1/img/jedeconne.gif)
 
 on tape juste 
 ```
@@ -181,7 +181,7 @@ default            192.168.0.254      UGScg                 en0
 
 trooo facile 
 
-![toeasyboy](/img/toeasy.gif)
+![toeasyboy](/TP-s-reseau/TP-1/img/toeasy.gif)
 
 ## II. Go further
 
@@ -204,7 +204,7 @@ maximeboizot@MacBook-pro-de-Maxime bin % cat /etc/hosts | grep 1.1.1.1
 
 et bha mtn plus qu'as verifier avec le fameux `ping`
 
-![pingpong](/img/pingpong.gif)
+![pingpong](/TP-s-reseau/TP-1/img/pingpong.gif)
 
 ```
 maximeboizot@MacBook-pro-de-Maxime bin % ping b2.hello.vous
@@ -223,7 +223,7 @@ quand on analyse on a ping `b2.hello.vous`et on recois des paquer de `1.1.1.1`
 
 bon pour la video youtube on doit recuper l'ip du server + le port qu'as ouvert le serv rien que pour nous et celui que ma machine a ouvert bien gentillement
 
-![tropmignonleserver](/img/tropmims.gif)
+![tropmignonleserver](/TP-s-reseau/TP-1/img/tropmims.gif)
 
 pour cela on fait une capture wireshark que voila 
 
@@ -238,7 +238,7 @@ eet le port la machine: 58186
 pour l'ip de www.inove.com ()
 j'ai pas pu ping il y avait pas de reseau en 206
 
-![cheh](/img/cheh.jpeg)
+![cheh](/TP-s-reseau/TP-1/img/cheh.jpeg)
 
 je deconne a l'ancienne on ping (de chez moi tjr pas de co en 206)
 
@@ -274,7 +274,7 @@ Authoritative answers can be found from:
 ```
 si c'est exat il s'agris de myvzw.com
 
-![test](/img/fautquejelemettent.jpeg)
+![test](/TP-s-reseau/TP-1/img/fautquejelemettent.jpeg)
 
 ensuite on va determiner par combien de machine passe nos paquets quand on va sur `ynov.com` on va utiliser la command `traceroute`
 
@@ -317,7 +317,7 @@ bon pour le scan reseau je essayer d'installer nmap avec brew et arp-scan ça ne
 
 ## III. Le requin
 
-![](/img/sniffing.gif)
+![](/TP-s-reseau/TP-1/img/sniffing.gif)
 
 bien premiere capture un echange arp entre moi et la passerelle 
 
