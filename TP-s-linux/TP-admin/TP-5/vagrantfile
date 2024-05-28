@@ -1,0 +1,63 @@
+Vagrant.configure("2") do |config|
+
+    # up et config web1.tp5.b2
+    config.vm.define "web1" do |web1|
+      web1.vm.box = "generic/rocky9"
+      web1.vm.hostname = "web1.tp5.b2"
+      web1.vm.network "private_network", ip: "10.5.1.11"
+      web1.vm.provider "virtualbox" do |vb|
+        vb.name = "web1"
+        vb.cpus = '1'
+        vb.memory = '512'
+      end
+      
+      web1.vm.synced_folder "./serv", "/var/serv"
+      web1.vm.provision "shell", inline: File.read("web1_setup.sh")
+    end
+  
+    # up et config rp1.tp5.b2
+    config.vm.define "rp1" do |rp1|
+      rp1.vm.box = "generic/rocky9"
+      rp1.vm.hostname = "rp1.tp5.b2"
+      rp1.vm.network "private_network", ip: "10.5.1.111"
+      rp1.vm.provider "virtualbox" do |vb|
+        vb.name = "rp1"
+        vb.cpus = '1'
+        vb.memory = '512'
+      end
+      
+      rp1.vm.provision "shell", inline: File.read("rp1_setup.sh")
+    end
+  
+    # up et config db1.tp5.b2
+    config.vm.define "db1" do |db1|
+      db1.vm.box = "generic/rocky9"
+      db1.vm.hostname = "db1.tp5.b2"
+      db1.vm.network "private_network", ip: "10.5.1.211"
+      db1.vm.provider "virtualbox" do |vb|
+        vb.name = "db1"
+        vb.cpus = '1'
+        vb.memory = '512'
+      end
+      
+      db1.vm.synced_folder "./db", "/home/vagrant/db_init"
+      db1.vm.provision "shell", inline: File.read("db1_setup.sh")
+    end
+  
+    config.vm.provision "shell", inline: <<-SHELL
+      # config du fichier hosts pour chaque machine
+      echo "10.5.1.11 web1.tp5.b2" | sudo tee -a /etc/hosts
+      echo "10.5.1.111 rp1.tp5.b2" | sudo tee -a /etc/hosts
+      echo "10.5.1.211 db1.tp5.b2" | sudo tee -a /etc/hosts
+      echo "10.5.1.111 app_nulle.tp5.b2" | sudo tee -a /etc/hosts
+  
+      # installation de firewalld et ouverture du port 22 pour le ssh en permanent et reload du firewall
+      sudo dnf install firewalld -y
+      sudo systemctl enable firewalld
+      sudo systemctl start firewalld
+      sudo firewall-cmd --zone=public --add-port=22/tcp --permanent
+      sudo firewall-cmd --reload
+    SHELL
+  
+  
+  end
