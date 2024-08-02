@@ -1,3 +1,7 @@
+# Conf Meow-Origins
+
+## le routeur
+
 ```
 R1#sh running-config
 Building configuration...
@@ -174,16 +178,279 @@ ip nat inside source list 1 interface FastEthernet0/0 overload
 !
 access-list 1 permit any
 ```
+## les switch 
+
+## les switch
+
+Sw1 : 
+```
+Sw1#sh running-config
+Building configuration...
+
+Current configuration : 2072 bytes
+!
+! Last configuration change at 11:58:46 UTC Fri May 17 2024
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname CoreSw1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging discriminator EXCESS severity drops 6 msg-body drops EXCESSCOLL
+logging buffered 50000
+logging console discriminator EXCESS
+!
+no aaa new-model
+!
+```
+
+Sw2 : 
+```
+Sw2#sh running-config
+Building configuration...
+
+Current configuration : 2072 bytes
+!
+! Last configuration change at 12:18:02 UTC Fri May 17 2024
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname CoreSw2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging discriminator EXCESS severity drops 6 msg-body drops EXCESSCOLL
+logging buffered 50000
+logging console discriminator EXCESS
+!
+no aaa new-model
+!
+```
+
+Sw3 : 
+```
+Sw3#sh running-config
+Building configuration...
+
+Current configuration : 1902 bytes
+!
+! Last configuration change at 13:34:23 UTC Fri May 17 2024
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname DistSw1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging discriminator EXCESS severity drops 6 msg-body drops EXCESSCOLL
+logging buffered 50000
+logging console discriminator EXCESS
+!
+no aaa new-model
+!
+```
+
+Sw4 : 
+```
+Sw4#sh running-config
+Building configuration...
+
+Current configuration : 1783 bytes
+!
+! Last configuration change at 11:48:26 UTC Fri May 17 2024
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname DistSw2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging discriminator EXCESS severity drops 6 msg-body drops EXCESSCOLL
+logging buffered 50000
+logging console discriminator EXCESS
+!
+no aaa new-model
+!
+```
+
+Sw5 : 
+```
+Sw5#sh running-config
+Building configuration...
+
+Current configuration : 1800 bytes
+!
+! Last configuration change at 12:31:28 UTC Fri May 17 2024
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname AccSw1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging discriminator EXCESS severity drops 6 msg-body drops EXCESSCOLL
+logging buffered 50000
+logging console discriminator EXCESS
+!
+no aaa new-model
+!
+```
+
+Sw6 : 
+```
+AccSw2#sh running-config
+Building configuration...
+
+Current configuration : 2054 bytes
+!
+! Last configuration change at 14:15:52 UTC Fri May 17 2024
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname AccSw2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging discriminator EXCESS severity drops 6 msg-body drops EXCESSCOLL
+logging buffered 50000
+logging console discriminator EXCESS
+!
+no aaa new-model
+!
+```
+
+Sw7 : 
+```
+Sw7#sh running-config
+Building configuration...
+
+Current configuration : 1850 bytes
+!
+! Last configuration change at 12:21:07 UTC Fri May 17 2024
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname AccSw3
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging discriminator EXCESS severity drops 6 msg-body drops EXCESSCOLL
+logging buffered 50000
+logging console discriminator EXCESS
+!
+no aaa new-model
+!
+```
+
+Sw8 : 
+```
+AccSw4#sh running-config
+Building configuration...
+
+Current configuration : 1748 bytes
+!
+! Last configuration change at 12:23:45 UTC Fri May 17 2024
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname AccSw4
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging discriminator EXCESS severity drops 6 msg-body drops EXCESSCOLL
+logging buffered 50000
+logging console discriminator EXCESS
+!
+no aaa new-model
+!
+```
+
+Sw9 : 
+```
+AccSw5#sh running-config
+Building configuration...
+
+Current configuration : 2258 bytes
+!
+! Last configuration change at 12:27:26 UTC Fri May 17 2024
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname AccSw5
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging discriminator EXCESS severity drops 6 msg-body drops EXCESSCOLL
+logging buffered 50000
+logging console discriminator EXCESS
+!
+no aaa new-model
+!
+```
+
 
 ## server DCHP
 
 ```
 [max@localhost ~]$ sudo cat /etc/dhcp/dhcpd.conf
-#
 # DHCP Server Configuration file.
 #   see /usr/share/doc/dhcp-server/dhcpd.conf.example
 #   see dhcpd.conf(5) man page
-#
 option domain-name      "tp8-domain";
 
 option domain-name-servers      1.1.1.1;
@@ -247,7 +514,7 @@ avec le petit service DHCPD qui run bieng
 [max@dhcp ~]$ systemctl status dhcpd
 ● dhcpd.service - DHCPv4 Server Daemon
      Loaded: loaded (/usr/lib/systemd/system/dhcpd.service; enabled; preset: disabled)
-     Active: active (running) since Tue 2024-05-19 18:47:56 CET; 2h 55min ago
+     Active: active (running) since Sun 2024-05-19 18:47:56 CET; 2h 55min ago
        Docs: man:dhcpd(8)
              man:dhcpd.conf(5)
    Main PID: 803 (dhcpd)
