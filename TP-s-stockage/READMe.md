@@ -3,7 +3,7 @@
 
 list de tout les peripheriques de stockage brancher à la machine
 
-```
+```bash
 [max@localhost ~]$ lsblk
 NAME             MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
 sda                8:0    0   10G  0 disk 
@@ -104,9 +104,37 @@ A mandatory SMART command failed: exiting. To continue, add one or more '-T perm
 
 l'espace disque disponible: 
 
-```
+```bash
 [max@localhost ~]$ df -H /
 Sys. de fichiers         Taille Utilisé Dispo Uti% Monté sur
 /dev/mapper/rl_vbox-root   8,6G    1,9G  6,7G  22% /
+```
+
+on instal ioping
+
+on utilie `-c` pour obtenir la latence disque `3` c'est le nombre de requetes et `/`
+
+```bash
+[max@localhost ~]$ sudo ioping -c 3 /
+[sudo] Mot de passe de max : 
+4 KiB <<< / (xfs /dev/dm-0 7.93 GiB): request=1 time=490.5 us (warmup)
+4 KiB <<< / (xfs /dev/dm-0 7.93 GiB): request=2 time=707.7 us
+4 KiB <<< / (xfs /dev/dm-0 7.93 GiB): request=3 time=685.7 us
+
+--- / (xfs /dev/dm-0 7.93 GiB) ioping statistics ---
+2 requests completed in 1.39 ms, 8 KiB read, 1.44 k iops, 5.61 MiB/s
+generated 3 requests in 2.00 s, 12 KiB, 1 iops, 5.99 KiB/s
+min/avg/max/mdev = 685.7 us / 696.7 us / 707.7 us / 11.0 us
+```
+
+le temps en ms coorespond à la latence
+
+le cache du filesystem
+
+```
+[max@localhost ~]$ vmstat
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 0  0      0 354452   2708 231056    0    0   135    74   83  171  1  2 98  0  0
 ```
 
