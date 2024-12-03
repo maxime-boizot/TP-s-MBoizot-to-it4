@@ -19,8 +19,9 @@ sdf                8:80   0   10G  0 disk
 sr0               11:0    1 1024M  0 rom
 ```
 
-ici on liste les partition des disques 
+ici on liste les partitions des disques 
 
+```bash
 [max@localhost ~]$ sudo fdisk -l
 Disque /dev/sda : 10 GiB, 10737418240 octets, 20971520 secteurs
 Modèle de disque : VBOX HARDDISK   
@@ -80,6 +81,7 @@ Disque /dev/mapper/rl_vbox-swap : 1 GiB, 1073741824 octets, 2097152 secteurs
 Unités : secteur de 1 × 512 = 512 octets
 Taille de secteur (logique / physique) : 512 octets / 512 octets
 taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+```
 
 on test `smartctl`
 
@@ -131,10 +133,70 @@ le temps en ms coorespond à la latence
 
 le cache du filesystem
 
-```
+```bash
 [max@localhost ~]$ vmstat
 procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
  r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
  0  0      0 354452   2708 231056    0    0   135    74   83  171  1  2 98  0  0
+```
+
+## II. partitioning 
+
+aller on créée le physical volume 
+
+```
+sudo pvcreate /dev/sdb
+```
+
+on ajoute notre physical volume à notre volume groupe
+
+```
+sudo vgcreate storage /dev/sdb
+```
+
+ensuite on crée notre volume logique
+
+```
+sudo lvcreate -L 2G -n smol_data storage
+sudo lvcreate -l 100%FREE -n smol_data storage
+```
+
+la première commande créé le volume logique smol_data avec 2G
+et la deuxième créé le LV big_data avec l'agument `100%FREE` qui permet d'aloué 100% de l'éspace restant disponible.
+
+maintenant on va y ajouter un système de fichier `ext4` à nos deux LV avec la command `mkfs`
+
+```bash
+sudo mkfs.ext4 /dev/storage/big_data
+sudo mkfs.ext4 /dev/storage/smol_data
+```
+
+on créé le point de montage
+
+```bash
+sudo mkdir /mnt/lvm_storage/smol
+sudo mkdir /mnt/lvm_storage/big
+```
+
+maintenant on va monté les LV
+
+```bash
+[max@localhost ~]$ sudo mount /dev/storage/smol_data /mnt/lvm_storage/smol
+[max@localhost ~]$ sudo mount /dev/storage/big_data /mnt/lvm_storage/big
+```
+
+le potit check
+
+```bash
+[max@localhost ~]$ df -h
+Sys. de fichiers              Taille Utilisé Dispo Uti% Monté sur
+devtmpfs                        4,0M       0  4,0M   0% /dev
+tmpfs                           385M       0  385M   0% /dev/shm
+tmpfs                           154M    3,1M  151M   2% /run
+/dev/mapper/rl_vbox-root        8,0G    2,0G  6,0G  26% /
+/dev/sda1                       960M    349M  612M  37% /boot
+tmpfs                            77M       0   77M   0% /run/user/1000
+/dev/mapper/storage-smol_data   2,0G     24K  1,8G   1% /mnt/lvm_storage/smol
+/dev/mapper/storage-big_data    7,8G     24K  7,4G   1% /mnt/lvm_storage/big
 ```
 
